@@ -32,11 +32,13 @@ namespace PacMan
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.UpdateStyles();
-            walls = new PictureBox[] { };
+            walls = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox33, pictureBox34, pictureBox35, pictureBox36, pictureBox37, pictureBox38, pictureBox39, pictureBox40, pictureBox41, pictureBox42, pictureBox43, pictureBox44, pictureBox45, pictureBox46 };
         }
 
         private void MoveAndAnimate_Tick(object sender, EventArgs e)
         {
+            px = Player.Location.X;
+            py = Player.Location.Y;
             #region Animation
             if(p==3)
             {
@@ -89,10 +91,15 @@ namespace PacMan
                 {
                     if (Player.Bounds.IntersectsWith(walls[i].Bounds))
                     {
-                        Player.Location = new Point(rx, ry);
+                        Player.Location = new Point(px, py);
                     }
                 }
             }
+        }
+
+        private void tmrUpdate_Tick(object sender, EventArgs e)
+        {
+            WallCollision();
         }
     }
 }
