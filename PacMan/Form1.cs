@@ -94,12 +94,39 @@ namespace PacMan
                         Player.Location = new Point(px, py);
                     }
                 }
+                if (Player.Bounds.IntersectsWith(GhostWall.Bounds))
+                {
+                    Player.Location = new Point(px, py);
+                }
+                if(Player.Bounds.IntersectsWith(Corridor1.Bounds) || Player.Bounds.IntersectsWith(Corridor2.Bounds))
+                {
+                    pSpeed = 4;
+                }
+                else
+                {
+                    pSpeed = 3;
+                }
+            }
+        }
+
+        private void Teleport()
+        {
+            if(Player.Location.X<162)
+            {
+                px = 642;
+                Player.Left = 642;
+            }
+            if (Player.Location.X > 643)
+            {
+                px = 163;
+                Player.Left = 163;
             }
         }
 
         private void tmrUpdate_Tick(object sender, EventArgs e)
         {
             WallCollision();
+            Teleport();
         }
     }
 }

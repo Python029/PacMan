@@ -79,6 +79,11 @@ namespace PacMan
             this.pictureBox44 = new System.Windows.Forms.PictureBox();
             this.pictureBox45 = new System.Windows.Forms.PictureBox();
             this.pictureBox46 = new System.Windows.Forms.PictureBox();
+            this.pictureBox47 = new System.Windows.Forms.PictureBox();
+            this.pictureBox48 = new System.Windows.Forms.PictureBox();
+            this.GhostWall = new System.Windows.Forms.PictureBox();
+            this.Corridor2 = new System.Windows.Forms.PictureBox();
+            this.Corridor1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -126,6 +131,11 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GhostWall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corridor2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corridor1)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrUpdate
@@ -146,9 +156,9 @@ namespace PacMan
             this.Player.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back;
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Player.Image = global::PacMan.Properties.Resources.PacMan1;
-            this.Player.Location = new System.Drawing.Point(424, 227);
+            this.Player.Location = new System.Drawing.Point(404, 253);
             this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(20, 20);
+            this.Player.Size = new System.Drawing.Size(19, 19);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Player.TabIndex = 0;
             this.Player.TabStop = false;
@@ -567,6 +577,49 @@ namespace PacMan
             this.pictureBox46.TabIndex = 49;
             this.pictureBox46.TabStop = false;
             // 
+            // pictureBox47
+            // 
+            this.pictureBox47.Location = new System.Drawing.Point(639, 289);
+            this.pictureBox47.Name = "pictureBox47";
+            this.pictureBox47.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox47.TabIndex = 50;
+            this.pictureBox47.TabStop = false;
+            // 
+            // pictureBox48
+            // 
+            this.pictureBox48.Location = new System.Drawing.Point(137, 289);
+            this.pictureBox48.Name = "pictureBox48";
+            this.pictureBox48.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox48.TabIndex = 51;
+            this.pictureBox48.TabStop = false;
+            // 
+            // GhostWall
+            // 
+            this.GhostWall.BackColor = System.Drawing.Color.Transparent;
+            this.GhostWall.Location = new System.Drawing.Point(394, 274);
+            this.GhostWall.Name = "GhostWall";
+            this.GhostWall.Size = new System.Drawing.Size(35, 14);
+            this.GhostWall.TabIndex = 52;
+            this.GhostWall.TabStop = false;
+            // 
+            // Corridor2
+            // 
+            this.Corridor2.BackColor = System.Drawing.Color.Transparent;
+            this.Corridor2.Location = new System.Drawing.Point(551, 296);
+            this.Corridor2.Name = "Corridor2";
+            this.Corridor2.Size = new System.Drawing.Size(105, 30);
+            this.Corridor2.TabIndex = 53;
+            this.Corridor2.TabStop = false;
+            // 
+            // Corridor1
+            // 
+            this.Corridor1.BackColor = System.Drawing.Color.Transparent;
+            this.Corridor1.Location = new System.Drawing.Point(167, 296);
+            this.Corridor1.Name = "Corridor1";
+            this.Corridor1.Size = new System.Drawing.Size(105, 30);
+            this.Corridor1.TabIndex = 54;
+            this.Corridor1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -575,6 +628,10 @@ namespace PacMan
             this.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(817, 627);
+            this.Controls.Add(this.GhostWall);
+            this.Controls.Add(this.pictureBox48);
+            this.Controls.Add(this.pictureBox47);
+            this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBox46);
             this.Controls.Add(this.pictureBox45);
             this.Controls.Add(this.pictureBox44);
@@ -599,7 +656,6 @@ namespace PacMan
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox24);
-            this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.pictureBox19);
@@ -622,6 +678,8 @@ namespace PacMan
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Corridor2);
+            this.Controls.Add(this.Corridor1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -676,6 +734,11 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GhostWall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corridor2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Corridor1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -731,6 +794,11 @@ namespace PacMan
         private System.Windows.Forms.PictureBox pictureBox44;
         private System.Windows.Forms.PictureBox pictureBox45;
         private System.Windows.Forms.PictureBox pictureBox46;
+        private System.Windows.Forms.PictureBox pictureBox47;
+        private System.Windows.Forms.PictureBox pictureBox48;
+        private System.Windows.Forms.PictureBox GhostWall;
+        private System.Windows.Forms.PictureBox Corridor2;
+        private System.Windows.Forms.PictureBox Corridor1;
     }
 }
 
