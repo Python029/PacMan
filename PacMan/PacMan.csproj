@@ -95,5 +95,17 @@
   <ItemGroup>
     <None Include="Resources\PacMan3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkUp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

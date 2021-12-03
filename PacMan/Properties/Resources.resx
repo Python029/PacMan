@@ -133,4 +133,16 @@
   <data name="PacMan3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacMan3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PinkDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinkDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PinkLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinkLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PinkRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinkRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PinkUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinkUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -18,9 +18,12 @@ namespace PacMan
         }
         bool pac = false;
         int p = 1;
+        int Speed = 3;
         int pSpeed = 3;
         bool u = false; bool d = false;
         bool l = false; bool r = false;
+        bool pu = false; bool pd = false;
+        bool pl = false; bool pr = false;
         int px = 0; int py = 0;
         PictureBox[] walls;
 
@@ -60,10 +63,13 @@ namespace PacMan
             p++;
             #endregion
             #region Movement
-            if (u) { Player.Top -= pSpeed; }
-            if (d) { Player.Top += pSpeed; }
-            if (l) { Player.Left -= pSpeed; }
-            if (r) { Player.Left += pSpeed; }
+            if (u) { Player.Top -= Speed; }
+            if (d) { Player.Top += Speed; }
+            if (l) { Player.Left -= Speed; }
+            if (r) { Player.Left += Speed; }
+            #endregion
+            #region Ghost Movement
+            PinkGhost();
             #endregion
         }
         #region Movement
@@ -87,6 +93,7 @@ namespace PacMan
         {
             if (MoveAndAnimate.Enabled == true)
             {
+                #region Player
                 for (int i = 0; i < walls.Length; i++)
                 {
                     if (Player.Bounds.IntersectsWith(walls[i].Bounds))
@@ -100,12 +107,35 @@ namespace PacMan
                 }
                 if(Player.Bounds.IntersectsWith(Corridor1.Bounds) || Player.Bounds.IntersectsWith(Corridor2.Bounds))
                 {
-                    pSpeed = 4;
+                    Speed = 4;
+                }
+                else
+                {
+                    Speed = 3;
+                }
+                #endregion
+
+                #region Pink Ghost
+                for (int i = 0; i < walls.Length; i++)
+                {
+                    if (Pinky.Bounds.IntersectsWith(walls[i].Bounds))
+                    {
+                        Pinky.Location = new Point(px, py);
+                    }
+                }
+                if (Player.Bounds.IntersectsWith(GhostWall.Bounds))
+                {
+                    Pinky.Location = new Point(px, py);
+                }
+                if (Player.Bounds.IntersectsWith(Corridor1.Bounds) || Player.Bounds.IntersectsWith(Corridor2.Bounds))
+                {
+                    pSpeed = 2;
                 }
                 else
                 {
                     pSpeed = 3;
                 }
+                #endregion
             }
         }
 
@@ -122,6 +152,18 @@ namespace PacMan
                 Player.Left = 163;
             }
         }
+        #region Ghost Movement
+        private void PinkGhost()
+        {
+            #region AI
+                
+            #endregion
+            if (pu) { Pinky.Top -= Speed; }
+            if (pd) { Pinky.Top += Speed; }
+            if (pl) { Pinky.Left -= Speed; }
+            if (pr) { Pinky.Left += Speed; }
+        }
+        #endregion
 
         private void tmrUpdate_Tick(object sender, EventArgs e)
         {

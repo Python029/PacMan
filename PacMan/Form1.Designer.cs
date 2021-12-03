@@ -30,6 +30,7 @@ namespace PacMan
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
             this.MoveAndAnimate = new System.Windows.Forms.Timer(this.components);
             this.Player = new System.Windows.Forms.PictureBox();
@@ -84,6 +85,7 @@ namespace PacMan
             this.GhostWall = new System.Windows.Forms.PictureBox();
             this.Corridor2 = new System.Windows.Forms.PictureBox();
             this.Corridor1 = new System.Windows.Forms.PictureBox();
+            this.Pinky = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -136,6 +138,7 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.GhostWall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Corridor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Corridor1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pinky)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrUpdate
@@ -153,7 +156,7 @@ namespace PacMan
             // Player
             // 
             this.Player.BackColor = System.Drawing.Color.Transparent;
-            this.Player.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back;
+            this.Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Player.BackgroundImage")));
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Player.Image = global::PacMan.Properties.Resources.PacMan1;
             this.Player.Location = new System.Drawing.Point(401, 250);
@@ -620,6 +623,19 @@ namespace PacMan
             this.Corridor1.TabIndex = 54;
             this.Corridor1.TabStop = false;
             // 
+            // Pinky
+            // 
+            this.Pinky.BackColor = System.Drawing.Color.Transparent;
+            this.Pinky.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pinky.BackgroundImage")));
+            this.Pinky.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Pinky.Image = ((System.Drawing.Image)(resources.GetObject("Pinky.Image")));
+            this.Pinky.Location = new System.Drawing.Point(402, 300);
+            this.Pinky.Name = "Pinky";
+            this.Pinky.Size = new System.Drawing.Size(19, 19);
+            this.Pinky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Pinky.TabIndex = 55;
+            this.Pinky.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -628,6 +644,7 @@ namespace PacMan
             this.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(817, 627);
+            this.Controls.Add(this.Pinky);
             this.Controls.Add(this.GhostWall);
             this.Controls.Add(this.pictureBox48);
             this.Controls.Add(this.pictureBox47);
@@ -739,6 +756,7 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.GhostWall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Corridor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Corridor1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pinky)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -799,6 +817,7 @@ namespace PacMan
         private System.Windows.Forms.PictureBox GhostWall;
         private System.Windows.Forms.PictureBox Corridor2;
         private System.Windows.Forms.PictureBox Corridor1;
+        private System.Windows.Forms.PictureBox Pinky;
     }
 }
 
