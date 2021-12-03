@@ -145,4 +145,16 @@
   <data name="PinkUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PinkUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RedDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

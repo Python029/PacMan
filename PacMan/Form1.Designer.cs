@@ -86,6 +86,7 @@ namespace PacMan
             this.Corridor2 = new System.Windows.Forms.PictureBox();
             this.Corridor1 = new System.Windows.Forms.PictureBox();
             this.Pinky = new System.Windows.Forms.PictureBox();
+            this.Blinky = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -139,6 +140,7 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.Corridor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Corridor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pinky)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Blinky)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrUpdate
@@ -159,7 +161,7 @@ namespace PacMan
             this.Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Player.BackgroundImage")));
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Player.Image = global::PacMan.Properties.Resources.PacMan1;
-            this.Player.Location = new System.Drawing.Point(401, 250);
+            this.Player.Location = new System.Drawing.Point(598, 149);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(19, 19);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -629,12 +631,25 @@ namespace PacMan
             this.Pinky.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pinky.BackgroundImage")));
             this.Pinky.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Pinky.Image = ((System.Drawing.Image)(resources.GetObject("Pinky.Image")));
-            this.Pinky.Location = new System.Drawing.Point(402, 300);
+            this.Pinky.Location = new System.Drawing.Point(375, 302);
             this.Pinky.Name = "Pinky";
             this.Pinky.Size = new System.Drawing.Size(19, 19);
             this.Pinky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Pinky.TabIndex = 55;
             this.Pinky.TabStop = false;
+            // 
+            // Blinky
+            // 
+            this.Blinky.BackColor = System.Drawing.Color.Transparent;
+            this.Blinky.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Blinky.BackgroundImage")));
+            this.Blinky.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Blinky.Image = global::PacMan.Properties.Resources.RedUp;
+            this.Blinky.Location = new System.Drawing.Point(402, 302);
+            this.Blinky.Name = "Blinky";
+            this.Blinky.Size = new System.Drawing.Size(19, 19);
+            this.Blinky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Blinky.TabIndex = 56;
+            this.Blinky.TabStop = false;
             // 
             // Form1
             // 
@@ -644,6 +659,7 @@ namespace PacMan
             this.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(817, 627);
+            this.Controls.Add(this.Blinky);
             this.Controls.Add(this.Pinky);
             this.Controls.Add(this.GhostWall);
             this.Controls.Add(this.pictureBox48);
@@ -757,6 +773,7 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.Corridor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Corridor1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pinky)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Blinky)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -818,6 +835,7 @@ namespace PacMan
         private System.Windows.Forms.PictureBox Corridor2;
         private System.Windows.Forms.PictureBox Corridor1;
         private System.Windows.Forms.PictureBox Pinky;
+        private System.Windows.Forms.PictureBox Blinky;
     }
 }
 

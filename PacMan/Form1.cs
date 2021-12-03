@@ -20,11 +20,14 @@ namespace PacMan
         int p = 1;
         int Speed = 3;
         int pSpeed = 3;
-        bool u = false; bool d = false;
-        bool l = false; bool r = false;
-        bool pu = false; bool pd = false;
-        bool pl = false; bool pr = false;
-        int px = 0; int py = 0;
+        int rSpeed = 3;
+        bool u = false; bool d = false; bool l = false; bool r = false;      
+        bool pu = false; bool pd = false; bool pl = false; bool pr = false;
+        bool ru = false; bool rd = false; bool rl = false; bool rr = false;
+        bool bu = false; bool bd = false; bool bl = false; bool br = false;
+        bool ou = false; bool od = false; bool ol = false; bool or = false;
+        bool pStart = false; bool rStart = false; bool bStart = false; bool oStart = false;
+        int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0;
         PictureBox[] walls;
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,10 +43,14 @@ namespace PacMan
 
         private void MoveAndAnimate_Tick(object sender, EventArgs e)
         {
-            px = Player.Location.X;
-            py = Player.Location.Y;
+            plx = Player.Location.X;
+            ply = Player.Location.Y;
+            px = Pinky.Location.X;
+            py = Pinky.Location.Y;
+            rx = Blinky.Location.X;
+            ry = Blinky.Location.Y;
             #region Animation
-            if(p==3)
+            if (p==3)
             {
                 Player.Image = Properties.Resources.PacMan2;
             }
@@ -70,6 +77,7 @@ namespace PacMan
             #endregion
             #region Ghost Movement
             PinkGhost();
+            RedGhost();
             #endregion
         }
         #region Movement
@@ -98,12 +106,12 @@ namespace PacMan
                 {
                     if (Player.Bounds.IntersectsWith(walls[i].Bounds))
                     {
-                        Player.Location = new Point(px, py);
+                        Player.Location = new Point(plx, ply);
                     }
                 }
                 if (Player.Bounds.IntersectsWith(GhostWall.Bounds))
                 {
-                    Player.Location = new Point(px, py);
+                    Player.Location = new Point(plx, ply);
                 }
                 if(Player.Bounds.IntersectsWith(Corridor1.Bounds) || Player.Bounds.IntersectsWith(Corridor2.Bounds))
                 {
@@ -127,13 +135,34 @@ namespace PacMan
                 {
                     Pinky.Location = new Point(px, py);
                 }
-                if (Player.Bounds.IntersectsWith(Corridor1.Bounds) || Player.Bounds.IntersectsWith(Corridor2.Bounds))
+                if (Pinky.Bounds.IntersectsWith(Corridor1.Bounds) || Player.Bounds.IntersectsWith(Corridor2.Bounds))
                 {
                     pSpeed = 2;
                 }
                 else
                 {
                     pSpeed = 3;
+                }
+                #endregion
+                #region Red Ghost
+                for (int i = 0; i < walls.Length; i++)
+                {
+                    if (Blinky.Bounds.IntersectsWith(walls[i].Bounds))
+                    {
+                        Blinky.Location = new Point(rx, ry);
+                    }
+                }
+                if (Player.Bounds.IntersectsWith(GhostWall.Bounds))
+                {
+                    Blinky.Location = new Point(rx, ry);
+                }
+                if (Player.Bounds.IntersectsWith(Corridor1.Bounds) || Player.Bounds.IntersectsWith(Corridor2.Bounds))
+                {
+                    rSpeed = 2;
+                }
+                else
+                {
+                    rSpeed = 3;
                 }
                 #endregion
             }
@@ -163,12 +192,68 @@ namespace PacMan
             if (pl) { Pinky.Left -= Speed; }
             if (pr) { Pinky.Left += Speed; }
         }
+        private void RedGhost()
+        {
+            if(rStart==false)
+            {
+                Blinky.Top -= rSpeed;
+            }
+            else if (rStart == true)
+            {
+                #region AI
+                if (Player.Location.X < Blinky.Location.X)
+                {
+                    rl = true;
+                    rr = false;
+                }
+                if (Player.Location.X > Blinky.Location.X)
+                {
+                    rl = false;
+                    rr = true;
+                }
+                if (Player.Location.Y < Blinky.Location.Y)
+                {
+                    ru = true;
+                    rd = false;
+                }
+                if (Player.Location.Y > Blinky.Location.Y)
+                {
+                    ru = false;
+                    rd = true;
+                }
+                if (Player.Location.X == Blinky.Location.X)
+                {
+                    rl = false;
+                    rr = false;
+                }
+                if (Player.Location.Y == Blinky.Location.X)
+                {
+                    ru = false;
+                    rd = false;
+                }
+                #endregion
+                #region Booleans
+                if (ru) { Blinky.Top -= rSpeed; }
+                if (rd) { Blinky.Top += rSpeed; }
+                if (rl) { Blinky.Left -= rSpeed; }
+                if (rr) { Blinky.Left += rSpeed; }
+                #endregion
+            }
+        }
+        private void Start()
+        {
+            if(rStart==false && Blinky.Location.Y<=252)
+            {
+                rStart = true;
+            }
+        }
         #endregion
-
+        
         private void tmrUpdate_Tick(object sender, EventArgs e)
         {
             WallCollision();
             Teleport();
+            Start();
         }
     }
 }
