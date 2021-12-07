@@ -21,7 +21,8 @@ namespace PacMan
         int Speed = 3;
         int pSpeed = 3;
         int rSpeed = 3;
-        bool u = false; bool d = false; bool l = false; bool r = false;      
+        bool u = false; bool d = false; bool l = false; bool r = false;
+        bool ui = false; bool di = false; bool li = false; bool ri = false;
         bool pu = false; bool pd = false; bool pl = false; bool pr = false;
         bool ru = false; bool rd = false; bool rl = false; bool rr = false;
         bool bu = false; bool bd = false; bool bl = false; bool br = false;
@@ -51,30 +52,93 @@ namespace PacMan
             rx = Blinky.Location.X;
             ry = Blinky.Location.Y;
             #region Animation
-            if (p==3)
+            if (ui == true)
             {
-                Player.Image = Properties.Resources.PacMan2;
+                if (p == 3)
+                {
+                    Player.Image = Properties.Resources.PacManU2;
+                }
+                else if (p == 6)
+                {
+                    Player.Image = Properties.Resources.PacManL1;
+                }
+                else if (p == 9)
+                {
+                    Player.Image = Properties.Resources.PacMan3;
+                }
+                else if (p == 12)
+                {
+                    Player.Image = Properties.Resources.PacManL1;
+                    p = 0;
+                }
             }
-            else if (p == 6)
+            if (di == true)
             {
-                Player.Image = Properties.Resources.PacMan1;
+                if (p == 3)
+                {
+                    Player.Image = Properties.Resources.PacManD2;
+                }
+                else if (p == 6)
+                {
+                    Player.Image = Properties.Resources.PacManL1;
+                }
+                else if (p == 9)
+                {
+                    Player.Image = Properties.Resources.PacMan3;
+                }
+                else if (p == 12)
+                {
+                    Player.Image = Properties.Resources.PacManL1;
+                    p = 0;
+                }
             }
-            else if (p == 9)
+            if (li == true)
             {
-                Player.Image = Properties.Resources.PacMan3;
+                if (p == 3)
+                {
+                    Player.Image = Properties.Resources.PacManL2;
+                }
+                else if (p == 6)
+                {
+                    Player.Image = Properties.Resources.PacManL1;
+                }
+                else if (p == 9)
+                {
+                    Player.Image = Properties.Resources.PacMan3;
+                }
+                else if (p == 12)
+                {
+                    Player.Image = Properties.Resources.PacManL1;
+                    p = 0;
+                }
             }
-            else if (p == 12)
+            if (ri == true)
             {
-                Player.Image = Properties.Resources.PacMan1;
-                p = 0;
+                if (p == 3)
+                {
+                    Player.Image = Properties.Resources.PacManR2;
+                }
+                else if (p == 6)
+                {
+                    Player.Image = Properties.Resources.PacManL1;
+                }
+                else if (p == 9)
+                {
+                    Player.Image = Properties.Resources.PacMan3;
+                }
+                else if (p == 12)
+                {
+                    Player.Image = Properties.Resources.PacManL1;
+                    p = 0;
+                }
             }
             p++;
             #endregion
             #region Movement
-            if (u) { Player.Top -= Speed; }
-            if (d) { Player.Top += Speed; }
-            if (l) { Player.Left -= Speed; }
-            if (r) { Player.Left += Speed; }
+            if (u) { Player.Top -= Speed; ui = true; di = false; li = false; ri = false;}
+            else if (d) { Player.Top += Speed; ui = false; di = true; li = false; ri = false; }
+            else if (l) { Player.Left -= Speed; ui = false; di = false; li = true; ri = false; }
+            else if (r) { Player.Left += Speed; ui = false; di = false; li = false; ri = true; }
             #endregion
             #region Ghost Movement
             PinkGhost();

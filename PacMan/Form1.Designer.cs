@@ -160,8 +160,8 @@ namespace PacMan
             this.Player.BackColor = System.Drawing.Color.Transparent;
             this.Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Player.BackgroundImage")));
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Player.Image = global::PacMan.Properties.Resources.PacMan1;
-            this.Player.Location = new System.Drawing.Point(520, 324);
+            this.Player.Image = global::PacMan.Properties.Resources.PacManL1;
+            this.Player.Location = new System.Drawing.Point(432, 253);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(19, 19);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -87,12 +87,6 @@
     <None Include="Resources\pacMan back1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PacMan1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PacMan2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\PacMan3.png" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +112,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RedUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacMan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacMan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacManD2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacManR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacManU2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
