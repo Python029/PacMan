@@ -60,7 +60,7 @@ namespace PacMan
                 }
                 else if (p == 6)
                 {
-                    Player.Image = Properties.Resources.PacManL1;
+                    Player.Image = Properties.Resources.PacManU1;
                 }
                 else if (p == 9)
                 {
@@ -68,11 +68,11 @@ namespace PacMan
                 }
                 else if (p == 12)
                 {
-                    Player.Image = Properties.Resources.PacManL1;
+                    Player.Image = Properties.Resources.PacManU1;
                     p = 0;
                 }
             }
-            if (di == true)
+            else if (di == true)
             {
                 if (p == 3)
                 {
@@ -80,7 +80,7 @@ namespace PacMan
                 }
                 else if (p == 6)
                 {
-                    Player.Image = Properties.Resources.PacManL1;
+                    Player.Image = Properties.Resources.PacManD1;
                 }
                 else if (p == 9)
                 {
@@ -88,11 +88,11 @@ namespace PacMan
                 }
                 else if (p == 12)
                 {
-                    Player.Image = Properties.Resources.PacManL1;
+                    Player.Image = Properties.Resources.PacManD1;
                     p = 0;
                 }
             }
-            if (li == true)
+            else if (li == true)
             {
                 if (p == 3)
                 {
@@ -112,7 +112,7 @@ namespace PacMan
                     p = 0;
                 }
             }
-            if (ri == true)
+            else if (ri == true)
             {
                 if (p == 3)
                 {
@@ -120,7 +120,7 @@ namespace PacMan
                 }
                 else if (p == 6)
                 {
-                    Player.Image = Properties.Resources.PacManL1;
+                    Player.Image = Properties.Resources.PacManR1;
                 }
                 else if (p == 9)
                 {
@@ -128,7 +128,7 @@ namespace PacMan
                 }
                 else if (p == 12)
                 {
-                    Player.Image = Properties.Resources.PacManL1;
+                    Player.Image = Properties.Resources.PacManR1;
                     p = 0;
                 }
             }

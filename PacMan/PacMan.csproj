@@ -128,5 +128,17 @@
   <ItemGroup>
     <None Include="Resources\PacManU2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacManD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacManL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacManR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PacManU1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

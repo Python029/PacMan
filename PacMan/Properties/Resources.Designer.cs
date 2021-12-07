@@ -93,6 +93,16 @@ namespace PacMan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PacManD1 {
+            get {
+                object obj = ResourceManager.GetObject("PacManD1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PacManD2 {
             get {
                 object obj = ResourceManager.GetObject("PacManD2", resourceCulture);
@@ -123,9 +133,29 @@ namespace PacMan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PacManR1 {
+            get {
+                object obj = ResourceManager.GetObject("PacManR1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PacManR2 {
             get {
                 object obj = ResourceManager.GetObject("PacManR2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PacManU1 {
+            get {
+                object obj = ResourceManager.GetObject("PacManU1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

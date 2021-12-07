@@ -127,17 +127,26 @@
   <data name="PacMan3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacMan3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PacManD1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PacManD1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PacManD2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacManD2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PacManL1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PacMan1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\PacManL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PacManL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacMan2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PacManR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PacManR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PacManR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacManR2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PacManU1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PacManU1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PacManU2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacManU2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
