@@ -161,7 +161,7 @@ namespace PacMan
             this.Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Player.BackgroundImage")));
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Player.Image = global::PacMan.Properties.Resources.PacManL1;
-            this.Player.Location = new System.Drawing.Point(432, 253);
+            this.Player.Location = new System.Drawing.Point(278, 302);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(19, 19);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -713,6 +713,7 @@ namespace PacMan
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Corridor2);
             this.Controls.Add(this.Corridor1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

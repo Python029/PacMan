@@ -17,7 +17,7 @@ namespace PacMan
             InitializeComponent();
         }
         
-        int p = 1;
+        int p = 0;
         int Speed = 3;
         int pSpeed = 3;
         int rSpeed = 3;
@@ -51,85 +51,86 @@ namespace PacMan
             rx = Blinky.Location.X;
             ry = Blinky.Location.Y;
             #region Animation
-            if (u == true)
+            if (u)
             {
-                if (p == 3)
+                switch (p)
                 {
-                    Player.Image = Properties.Resources.PacManU2;
+                    case 3:
+                        Player.Image = Properties.Resources.PacManU2;
+                        break;
+                    case 6:
+                        Player.Image = Properties.Resources.PacManU1;
+                        break;
+                    case 9:
+                        Player.Image = Properties.Resources.PacMan3;
+                        break;
+                    case 12:
+                        Player.Image = Properties.Resources.PacManU1;
+                        p = 0;
+                        break;
                 }
-                else if (p == 6)
+                    
+            }
+            else if (d)
+            {
+                switch (p)
                 {
-                    Player.Image = Properties.Resources.PacManU1;
-                }
-                else if (p == 9)
-                {
-                    Player.Image = Properties.Resources.PacMan3;
-                }
-                else if (p == 12)
-                {
-                    Player.Image = Properties.Resources.PacManU1;
-                    p = 0;
+                    case 3:
+                        Player.Image = Properties.Resources.PacManD2;
+                        break;
+                    case 6:
+                        Player.Image = Properties.Resources.PacManD1;
+                        break;
+                    case 9:
+                        Player.Image = Properties.Resources.PacMan3;
+                        break;
+                    case 12:
+                        Player.Image = Properties.Resources.PacManD1;
+                        p = 0;
+                        break;
                 }
             }
-            else if (d == true)
+            else if (l)
             {
-                if (p == 3)
+                switch (p)
                 {
-                    Player.Image = Properties.Resources.PacManD2;
-                }
-                else if (p == 6)
-                {
-                    Player.Image = Properties.Resources.PacManD1;
-                }
-                else if (p == 9)
-                {
-                    Player.Image = Properties.Resources.PacMan3;
-                }
-                else if (p == 12)
-                {
-                    Player.Image = Properties.Resources.PacManD1;
-                    p = 0;
+                    case 3:
+                        Player.Image = Properties.Resources.PacManL2;
+                        break;
+                    case 6:
+                        Player.Image = Properties.Resources.PacManL1;
+                        break;
+                    case 9:
+                        Player.Image = Properties.Resources.PacMan3;
+                        break;
+                    case 12:
+                        Player.Image = Properties.Resources.PacManL1;
+                        p = 0;
+                        break;
                 }
             }
-            else if (l == true)
+            else if (r)
             {
-                if (p == 3)
+                switch (p)
                 {
-                    Player.Image = Properties.Resources.PacManL2;
-                }
-                else if (p == 6)
-                {
-                    Player.Image = Properties.Resources.PacManL1;
-                }
-                else if (p == 9)
-                {
-                    Player.Image = Properties.Resources.PacMan3;
-                }
-                else if (p == 12)
-                {
-                    Player.Image = Properties.Resources.PacManL1;
-                    p = 0;
+                    case 3:
+                        Player.Image = Properties.Resources.PacManR2;
+                        break;
+                    case 6:
+                        Player.Image = Properties.Resources.PacManR1;
+                        break;
+                    case 9:
+                        Player.Image = Properties.Resources.PacMan3;
+                        break;
+                    case 12:
+                        Player.Image = Properties.Resources.PacManR1;
+                        p = 0;
+                        break;
                 }
             }
-            else if (r == true)
+            if(p==12)
             {
-                if (p == 3)
-                {
-                    Player.Image = Properties.Resources.PacManR2;
-                }
-                else if (p == 6)
-                {
-                    Player.Image = Properties.Resources.PacManR1;
-                }
-                else if (p == 9)
-                {
-                    Player.Image = Properties.Resources.PacMan3;
-                }
-                else if (p == 12)
-                {
-                    Player.Image = Properties.Resources.PacManR1;
-                    p = 0;
-                }
+                p = 0;
             }
             p++;
             #endregion
