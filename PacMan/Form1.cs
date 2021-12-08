@@ -22,7 +22,6 @@ namespace PacMan
         int pSpeed = 3;
         int rSpeed = 3;
         bool u = false; bool d = false; bool l = false; bool r = false;
-        bool ui = false; bool di = false; bool li = false; bool ri = false;
         bool pu = false; bool pd = false; bool pl = false; bool pr = false;
         bool ru = false; bool rd = false; bool rl = false; bool rr = false;
         bool bu = false; bool bd = false; bool bl = false; bool br = false;
@@ -52,7 +51,7 @@ namespace PacMan
             rx = Blinky.Location.X;
             ry = Blinky.Location.Y;
             #region Animation
-            if (ui == true)
+            if (u == true)
             {
                 if (p == 3)
                 {
@@ -72,7 +71,7 @@ namespace PacMan
                     p = 0;
                 }
             }
-            else if (di == true)
+            else if (d == true)
             {
                 if (p == 3)
                 {
@@ -92,7 +91,7 @@ namespace PacMan
                     p = 0;
                 }
             }
-            else if (li == true)
+            else if (l == true)
             {
                 if (p == 3)
                 {
@@ -112,7 +111,7 @@ namespace PacMan
                     p = 0;
                 }
             }
-            else if (ri == true)
+            else if (r == true)
             {
                 if (p == 3)
                 {
@@ -135,10 +134,10 @@ namespace PacMan
             p++;
             #endregion
             #region Movement
-            if (u) { Player.Top -= Speed; ui = true; di = false; li = false; ri = false;}
-            else if (d) { Player.Top += Speed; ui = false; di = true; li = false; ri = false; }
-            else if (l) { Player.Left -= Speed; ui = false; di = false; li = true; ri = false; }
-            else if (r) { Player.Left += Speed; ui = false; di = false; li = false; ri = true; }
+            if (u) { Player.Top -= Speed; }
+            else if (d) { Player.Top += Speed;}
+            else if (l) { Player.Left -= Speed;}
+            else if (r) { Player.Left += Speed;}
             #endregion
             #region Ghost Movement
             PinkGhost();
