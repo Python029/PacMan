@@ -187,7 +187,6 @@ namespace PacMan
                     Speed = 3;
                 }
                 #endregion
-
                 #region Pink Ghost
                 for (int i = 0; i < walls.Length; i++)
                 {
@@ -260,9 +259,9 @@ namespace PacMan
                 
             #endregion
             if (pu) { Pinky.Top -= pSpeed; }
-            if (pd) { Pinky.Top += pSpeed; }
+            else if (pd) { Pinky.Top += pSpeed; }
             if (pl) { Pinky.Left -= pSpeed; }
-            if (pr) { Pinky.Left += pSpeed; }
+            else if (pr) { Pinky.Left += pSpeed; }
         }
         private void RedGhost()
         {
@@ -309,7 +308,7 @@ namespace PacMan
                 {
                     if (ru) { Blinky.Top -= rSpeed; rChange = true; }
                     else if (rd) { Blinky.Top += rSpeed; rChange = true; }
-                    else if (rl) { Blinky.Left -= rSpeed; rChange = true; }
+                    if (rl) { Blinky.Left -= rSpeed; rChange = true; }
                     else if (rr) { Blinky.Left += rSpeed; rChange = true; }
                 }
                 #endregion
