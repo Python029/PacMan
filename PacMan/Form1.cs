@@ -49,7 +49,8 @@ namespace PacMan
             {
                 for (int i = 49; i < 132; i++)
                 {
-                    pellets.Add("pictureBox" + i.ToString());
+                    PictureBox pb = "pictureBox" + i.ToString();
+                    pellets.Add(pb);
                 }
                 pellet = true;
             }
