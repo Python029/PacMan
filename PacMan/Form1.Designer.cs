@@ -119,8 +119,8 @@ namespace PacMan
             this.pictureBox78 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblHScore = new System.Windows.Forms.Label();
             this.pictureBox79 = new System.Windows.Forms.PictureBox();
             this.pictureBox80 = new System.Windows.Forms.PictureBox();
             this.pictureBox81 = new System.Windows.Forms.PictureBox();
@@ -174,6 +174,9 @@ namespace PacMan
             this.pictureBox129 = new System.Windows.Forms.PictureBox();
             this.pictureBox130 = new System.Windows.Forms.PictureBox();
             this.pictureBox131 = new System.Windows.Forms.PictureBox();
+            this.pictureBox132 = new System.Windows.Forms.PictureBox();
+            this.pictureBox133 = new System.Windows.Forms.PictureBox();
+            this.pictureBox134 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -311,6 +314,9 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox129)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox130)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox131)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox132)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox133)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox134)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrUpdate
@@ -1113,27 +1119,27 @@ namespace PacMan
             this.label2.TabIndex = 89;
             this.label2.Text = "Highscore";
             // 
-            // label3
+            // lblScore
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(194, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 25);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "000000";
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.White;
+            this.lblScore.Location = new System.Drawing.Point(194, 33);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(126, 25);
+            this.lblScore.TabIndex = 90;
+            this.lblScore.Text = "000000";
             // 
-            // label4
+            // lblHScore
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(477, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 25);
-            this.label4.TabIndex = 91;
-            this.label4.Text = "000000";
+            this.lblHScore.AutoSize = true;
+            this.lblHScore.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHScore.ForeColor = System.Drawing.Color.White;
+            this.lblHScore.Location = new System.Drawing.Point(477, 33);
+            this.lblHScore.Name = "lblHScore";
+            this.lblHScore.Size = new System.Drawing.Size(126, 25);
+            this.lblHScore.TabIndex = 91;
+            this.lblHScore.Text = "000000";
             // 
             // pictureBox79
             // 
@@ -1612,6 +1618,45 @@ namespace PacMan
             this.pictureBox131.TabIndex = 143;
             this.pictureBox131.TabStop = false;
             // 
+            // pictureBox132
+            // 
+            this.pictureBox132.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox132.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox132.BackgroundImage")));
+            this.pictureBox132.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox132.Image = global::PacMan.Properties.Resources.PacManL1;
+            this.pictureBox132.Location = new System.Drawing.Point(241, 254);
+            this.pictureBox132.Name = "pictureBox132";
+            this.pictureBox132.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox132.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox132.TabIndex = 145;
+            this.pictureBox132.TabStop = false;
+            // 
+            // pictureBox133
+            // 
+            this.pictureBox133.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox133.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox133.BackgroundImage")));
+            this.pictureBox133.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox133.Image = global::PacMan.Properties.Resources.PacManL1;
+            this.pictureBox133.Location = new System.Drawing.Point(216, 254);
+            this.pictureBox133.Name = "pictureBox133";
+            this.pictureBox133.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox133.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox133.TabIndex = 146;
+            this.pictureBox133.TabStop = false;
+            // 
+            // pictureBox134
+            // 
+            this.pictureBox134.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox134.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox134.BackgroundImage")));
+            this.pictureBox134.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox134.Image = global::PacMan.Properties.Resources.PacManL1;
+            this.pictureBox134.Location = new System.Drawing.Point(191, 254);
+            this.pictureBox134.Name = "pictureBox134";
+            this.pictureBox134.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox134.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox134.TabIndex = 147;
+            this.pictureBox134.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1620,9 +1665,12 @@ namespace PacMan
             this.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(817, 627);
+            this.Controls.Add(this.pictureBox134);
+            this.Controls.Add(this.pictureBox133);
+            this.Controls.Add(this.pictureBox132);
             this.Controls.Add(this.Player);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblHScore);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Blinky);
@@ -1764,7 +1812,7 @@ namespace PacMan
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Pac Man";
             this.TransparencyKey = System.Drawing.Color.Indigo;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -1906,6 +1954,9 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox129)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox130)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox131)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox132)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox133)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox134)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2001,8 +2052,8 @@ namespace PacMan
         private System.Windows.Forms.PictureBox pictureBox78;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblHScore;
         private System.Windows.Forms.PictureBox pictureBox79;
         private System.Windows.Forms.PictureBox pictureBox80;
         private System.Windows.Forms.PictureBox pictureBox81;
@@ -2056,6 +2107,9 @@ namespace PacMan
         private System.Windows.Forms.PictureBox pictureBox129;
         private System.Windows.Forms.PictureBox pictureBox130;
         private System.Windows.Forms.PictureBox pictureBox131;
+        private System.Windows.Forms.PictureBox pictureBox132;
+        private System.Windows.Forms.PictureBox pictureBox133;
+        private System.Windows.Forms.PictureBox pictureBox134;
     }
 }
 

@@ -22,6 +22,7 @@ namespace PacMan
         int pSpeed = 3;
         int rSpeed = 3;
         bool pellet = false;
+        int score = 0;
         bool u = false; bool d = false; bool l = false; bool r = false;
         bool pu = false; bool pd = false; bool pl = false; bool pr = false;
         bool ru = false; bool rd = false; bool rl = false; bool rr = false;
@@ -31,7 +32,8 @@ namespace PacMan
         bool pChange = false; bool rChange = false;
         int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0;
         PictureBox[] walls;
-        List<PictureBox> pellets = new List<PictureBox>();        
+        List<PictureBox> pellets = new List<PictureBox>();
+        List<PictureBox> Bpellets = new List<PictureBox>();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -47,13 +49,58 @@ namespace PacMan
         {
             if (pellet == false)
             {
-                for (int i = 49; i < 132; i++)
+                for (int i = 49; i < 128; i++)
                 {
-                    PictureBox pb = "pictureBox" + i.ToString();
+                    PictureBox pb = (PictureBox)this.Controls["pictureBox"+i.ToString()];
                     pellets.Add(pb);
+                }
+                for (int i = 128; i < 132; i++)
+                {
+                    PictureBox pb = (PictureBox)this.Controls["pictureBox" + i.ToString()];
+                    Bpellets.Add(pb);
                 }
                 pellet = true;
             }
+        }
+        private void Score()
+        {
+            for(int i = 0;i<pellets.Count;i++)
+            {
+                if(Player.Bounds.IntersectsWith(pellets[i].Bounds))
+                {
+                    score += 10;
+                    pellets[i].Dispose();
+                    pellets.RemoveAt(i);
+                }
+                
+            }
+            for (int i = 0; i < Bpellets.Count; i++)
+            {
+                if (Player.Bounds.IntersectsWith(Bpellets[i].Bounds))
+                {
+                    score += 50;
+                    Bpellets[i].Dispose();
+                    Bpellets.RemoveAt(i);
+                }
+            }
+            #region Show Score
+            if(score>=10&&score<100)
+            {
+                lblScore.Text = "0000" + score.ToString();
+            }
+            if (score >= 100 && score < 1000)
+            {
+                lblScore.Text = "000" + score.ToString();
+            }
+            if (score >= 1000 && score < 10000)
+            {
+                lblScore.Text = "00" + score.ToString();
+            }
+            if (score >= 10000 && score < 100000)
+            {
+                lblScore.Text = "0" + score.ToString();
+            }
+            #endregion
         }
         private void MoveAndAnimate_Tick(object sender, EventArgs e)
         {
@@ -338,10 +385,12 @@ namespace PacMan
         
         private void tmrUpdate_Tick(object sender, EventArgs e)
         {
+            Score();
             WallCollision();
             Teleport();
             Start();
             LoadPellets();
+            
         }
     }
 }
