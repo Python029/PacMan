@@ -176,7 +176,6 @@ namespace PacMan
             this.pictureBox131 = new System.Windows.Forms.PictureBox();
             this.pictureBox132 = new System.Windows.Forms.PictureBox();
             this.pictureBox133 = new System.Windows.Forms.PictureBox();
-            this.pictureBox134 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -316,7 +315,6 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox131)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox132)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox133)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox134)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrUpdate
@@ -1644,19 +1642,6 @@ namespace PacMan
             this.pictureBox133.TabIndex = 146;
             this.pictureBox133.TabStop = false;
             // 
-            // pictureBox134
-            // 
-            this.pictureBox134.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox134.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox134.BackgroundImage")));
-            this.pictureBox134.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox134.Image = global::PacMan.Properties.Resources.PacManL1;
-            this.pictureBox134.Location = new System.Drawing.Point(191, 254);
-            this.pictureBox134.Name = "pictureBox134";
-            this.pictureBox134.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox134.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox134.TabIndex = 147;
-            this.pictureBox134.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1665,7 +1650,6 @@ namespace PacMan
             this.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(817, 627);
-            this.Controls.Add(this.pictureBox134);
             this.Controls.Add(this.pictureBox133);
             this.Controls.Add(this.pictureBox132);
             this.Controls.Add(this.Player);
@@ -1956,7 +1940,6 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox131)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox132)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox133)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox134)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2109,7 +2092,6 @@ namespace PacMan
         private System.Windows.Forms.PictureBox pictureBox131;
         private System.Windows.Forms.PictureBox pictureBox132;
         private System.Windows.Forms.PictureBox pictureBox133;
-        private System.Windows.Forms.PictureBox pictureBox134;
     }
 }
 
