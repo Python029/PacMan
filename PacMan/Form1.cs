@@ -21,6 +21,7 @@ namespace PacMan
         int Speed = 3;
         int pSpeed = 3;
         int rSpeed = 3;
+        bool pellet = false;
         bool u = false; bool d = false; bool l = false; bool r = false;
         bool pu = false; bool pd = false; bool pl = false; bool pr = false;
         bool ru = false; bool rd = false; bool rl = false; bool rr = false;
@@ -30,6 +31,7 @@ namespace PacMan
         bool pChange = false; bool rChange = false;
         int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0;
         PictureBox[] walls;
+        List<PictureBox> pellets = new List<PictureBox>();        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -41,7 +43,17 @@ namespace PacMan
             this.UpdateStyles();
             walls = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox33, pictureBox34, pictureBox35, pictureBox36, pictureBox37, pictureBox38, pictureBox39, pictureBox40, pictureBox41, pictureBox42, pictureBox43, pictureBox44, pictureBox45, pictureBox46 };
         }
-
+        private void LoadPellets()
+        {
+            if (pellet == false)
+            {
+                for (int i = 49; i < 132; i++)
+                {
+                    pellets.Add("pictureBox" + i.ToString());
+                }
+                pellet = true;
+            }
+        }
         private void MoveAndAnimate_Tick(object sender, EventArgs e)
         {
             plx = Player.Location.X;
@@ -328,6 +340,7 @@ namespace PacMan
             WallCollision();
             Teleport();
             Start();
+            LoadPellets();
         }
     }
 }
