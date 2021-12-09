@@ -1107,7 +1107,7 @@ namespace PacMan
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(447, 6);
+            this.label2.Location = new System.Drawing.Point(451, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 25);
             this.label2.TabIndex = 89;
@@ -1129,7 +1129,7 @@ namespace PacMan
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(473, 33);
+            this.label4.Location = new System.Drawing.Point(477, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 25);
             this.label4.TabIndex = 91;
@@ -1579,7 +1579,7 @@ namespace PacMan
             // pictureBox128
             // 
             this.pictureBox128.BackColor = System.Drawing.Color.White;
-            this.pictureBox128.Location = new System.Drawing.Point(204, 118);
+            this.pictureBox128.Location = new System.Drawing.Point(204, 120);
             this.pictureBox128.Name = "pictureBox128";
             this.pictureBox128.Size = new System.Drawing.Size(16, 16);
             this.pictureBox128.TabIndex = 141;
