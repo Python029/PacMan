@@ -32,6 +32,7 @@ namespace PacMan
         bool pChange = false; bool rChange = false;
         int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0;
         PictureBox[] walls;
+        PictureBox[] ghosts;
         List<PictureBox> pellets = new List<PictureBox>();
         List<PictureBox> Bpellets = new List<PictureBox>();
 
@@ -43,6 +44,7 @@ namespace PacMan
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.UpdateStyles();
+            ghosts = new PictureBox[] { Pinky, Blinky };
             walls = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox33, pictureBox34, pictureBox35, pictureBox36, pictureBox37, pictureBox38, pictureBox39, pictureBox40, pictureBox41, pictureBox42, pictureBox43, pictureBox44, pictureBox45, pictureBox46 };
         }
         private void LoadPellets()
@@ -246,6 +248,15 @@ namespace PacMan
                 {
                     Speed = 3;
                 }
+                //Lives
+                for(int i=0;i<ghosts.Length; i++)
+                {
+                    if(Player.Bounds.IntersectsWith(ghosts[i].Bounds))
+                    {
+                        Properties.Settings.Default.Lives -= 1;
+                        Player.Location = new Point(402, 349);
+                    }
+                }
                 #endregion
                 #region Pink Ghost
                 for (int i = 0; i < walls.Length; i++)
@@ -382,7 +393,25 @@ namespace PacMan
             }
         }
         #endregion
-        
+        private void Lives()
+        {
+            if(Properties.Settings.Default.Lives==0)
+            {
+                Lives3.Image = Properties.Resources.PacManL1;
+            }
+            if (Properties.Settings.Default.Lives == 1)
+            {
+                Lives2.Image = Properties.Resources.PacManL1;
+            }
+            if (Properties.Settings.Default.Lives == 2)
+            {
+                Lives1.Image = Properties.Resources.PacManL1;
+            }
+            if (Properties.Settings.Default.Lives == 3)
+            {
+                Lives1.Image.Dispose();
+            }
+        }
         private void tmrUpdate_Tick(object sender, EventArgs e)
         {
             Score();
@@ -390,7 +419,7 @@ namespace PacMan
             Teleport();
             Start();
             LoadPellets();
-            
+            Lives();
         }
     }
 }

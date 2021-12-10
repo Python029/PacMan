@@ -174,8 +174,9 @@ namespace PacMan
             this.pictureBox129 = new System.Windows.Forms.PictureBox();
             this.pictureBox130 = new System.Windows.Forms.PictureBox();
             this.pictureBox131 = new System.Windows.Forms.PictureBox();
-            this.pictureBox132 = new System.Windows.Forms.PictureBox();
-            this.pictureBox133 = new System.Windows.Forms.PictureBox();
+            this.Lives1 = new System.Windows.Forms.PictureBox();
+            this.Lives2 = new System.Windows.Forms.PictureBox();
+            this.Lives3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -313,8 +314,9 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox129)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox130)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox131)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox132)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox133)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lives1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lives2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lives3)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrUpdate
@@ -1616,31 +1618,43 @@ namespace PacMan
             this.pictureBox131.TabIndex = 143;
             this.pictureBox131.TabStop = false;
             // 
-            // pictureBox132
+            // Lives1
             // 
-            this.pictureBox132.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox132.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox132.BackgroundImage")));
-            this.pictureBox132.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox132.Image = global::PacMan.Properties.Resources.PacManL1;
-            this.pictureBox132.Location = new System.Drawing.Point(241, 254);
-            this.pictureBox132.Name = "pictureBox132";
-            this.pictureBox132.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox132.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox132.TabIndex = 145;
-            this.pictureBox132.TabStop = false;
+            this.Lives1.BackColor = System.Drawing.Color.Transparent;
+            this.Lives1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Lives1.BackgroundImage")));
+            this.Lives1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Lives1.Image = global::PacMan.Properties.Resources.PacManL1;
+            this.Lives1.Location = new System.Drawing.Point(241, 254);
+            this.Lives1.Name = "Lives1";
+            this.Lives1.Size = new System.Drawing.Size(19, 19);
+            this.Lives1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Lives1.TabIndex = 145;
+            this.Lives1.TabStop = false;
             // 
-            // pictureBox133
+            // Lives2
             // 
-            this.pictureBox133.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox133.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox133.BackgroundImage")));
-            this.pictureBox133.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox133.Image = global::PacMan.Properties.Resources.PacManL1;
-            this.pictureBox133.Location = new System.Drawing.Point(216, 254);
-            this.pictureBox133.Name = "pictureBox133";
-            this.pictureBox133.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox133.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox133.TabIndex = 146;
-            this.pictureBox133.TabStop = false;
+            this.Lives2.BackColor = System.Drawing.Color.Transparent;
+            this.Lives2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Lives2.BackgroundImage")));
+            this.Lives2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Lives2.Image = global::PacMan.Properties.Resources.PacManL1;
+            this.Lives2.Location = new System.Drawing.Point(216, 254);
+            this.Lives2.Name = "Lives2";
+            this.Lives2.Size = new System.Drawing.Size(19, 19);
+            this.Lives2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Lives2.TabIndex = 146;
+            this.Lives2.TabStop = false;
+            // 
+            // Lives3
+            // 
+            this.Lives3.BackColor = System.Drawing.Color.Transparent;
+            this.Lives3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Lives3.BackgroundImage")));
+            this.Lives3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Lives3.Location = new System.Drawing.Point(191, 254);
+            this.Lives3.Name = "Lives3";
+            this.Lives3.Size = new System.Drawing.Size(19, 19);
+            this.Lives3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Lives3.TabIndex = 147;
+            this.Lives3.TabStop = false;
             // 
             // Form1
             // 
@@ -1650,8 +1664,9 @@ namespace PacMan
             this.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(817, 627);
-            this.Controls.Add(this.pictureBox133);
-            this.Controls.Add(this.pictureBox132);
+            this.Controls.Add(this.Lives3);
+            this.Controls.Add(this.Lives2);
+            this.Controls.Add(this.Lives1);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.lblHScore);
             this.Controls.Add(this.lblScore);
@@ -1938,8 +1953,9 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox129)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox130)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox131)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox132)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox133)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lives1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lives2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lives3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2090,8 +2106,9 @@ namespace PacMan
         private System.Windows.Forms.PictureBox pictureBox129;
         private System.Windows.Forms.PictureBox pictureBox130;
         private System.Windows.Forms.PictureBox pictureBox131;
-        private System.Windows.Forms.PictureBox pictureBox132;
-        private System.Windows.Forms.PictureBox pictureBox133;
+        private System.Windows.Forms.PictureBox Lives1;
+        private System.Windows.Forms.PictureBox Lives2;
+        private System.Windows.Forms.PictureBox Lives3;
     }
 }
 
