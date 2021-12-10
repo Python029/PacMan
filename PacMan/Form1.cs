@@ -23,6 +23,7 @@ namespace PacMan
         int rSpeed = 3;
         bool pellet = false;
         int score = 0;
+        int life = 2;
         bool u = false; bool d = false; bool l = false; bool r = false;
         bool pu = false; bool pd = false; bool pl = false; bool pr = false;
         bool ru = false; bool rd = false; bool rl = false; bool rr = false;
@@ -253,8 +254,15 @@ namespace PacMan
                 {
                     if(Player.Bounds.IntersectsWith(ghosts[i].Bounds))
                     {
-                        Properties.Settings.Default.Lives -= 1;
-                        Player.Location = new Point(402, 349);
+                        if(life ==0)
+                        {
+                            GameOver();
+                        }
+                        if (life > 0)
+                        {
+                            life -= 1;
+                            Player.Location = new Point(402, 349);
+                        }
                     }
                 }
                 #endregion
@@ -309,7 +317,10 @@ namespace PacMan
                 #endregion
             }
         }
-
+        private void GameOver()
+        {
+            if(score>Properties.Settings.)
+        }
         private void Teleport()
         {
             if(Player.Location.X<162)
@@ -395,21 +406,23 @@ namespace PacMan
         #endregion
         private void Lives()
         {
-            if(Properties.Settings.Default.Lives==0)
+            if(life==0)
             {
-                Lives3.Image = Properties.Resources.PacManL1;
+                Lives1.Image = null;
             }
-            if (Properties.Settings.Default.Lives == 1)
-            {
-                Lives2.Image = Properties.Resources.PacManL1;
-            }
-            if (Properties.Settings.Default.Lives == 2)
+            else if (life == 1)
             {
                 Lives1.Image = Properties.Resources.PacManL1;
+                Lives2.Image = null;
             }
-            if (Properties.Settings.Default.Lives == 3)
+            else if (life == 2)
             {
-                Lives1.Image.Dispose();
+                Lives2.Image = Properties.Resources.PacManL1;
+                Lives3.Image = null;
+            }
+            else if (life == 3)
+            {
+                Lives3.Image = Properties.Resources.PacManL1;
             }
         }
         private void tmrUpdate_Tick(object sender, EventArgs e)

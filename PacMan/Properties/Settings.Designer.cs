@@ -25,7 +25,7 @@ namespace PacMan.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int Lives {
             get {
                 return ((int)(this["Lives"]));
@@ -37,13 +37,25 @@ namespace PacMan.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public string Score {
             get {
                 return ((string)(this["Score"]));
             }
             set {
                 this["Score"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string High {
+            get {
+                return ((string)(this["High"]));
+            }
+            set {
+                this["High"] = value;
             }
         }
     }

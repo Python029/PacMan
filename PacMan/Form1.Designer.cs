@@ -1621,7 +1621,6 @@ namespace PacMan
             // Lives1
             // 
             this.Lives1.BackColor = System.Drawing.Color.Transparent;
-            this.Lives1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Lives1.BackgroundImage")));
             this.Lives1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Lives1.Image = global::PacMan.Properties.Resources.PacManL1;
             this.Lives1.Location = new System.Drawing.Point(241, 254);
@@ -1634,7 +1633,6 @@ namespace PacMan
             // Lives2
             // 
             this.Lives2.BackColor = System.Drawing.Color.Transparent;
-            this.Lives2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Lives2.BackgroundImage")));
             this.Lives2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Lives2.Image = global::PacMan.Properties.Resources.PacManL1;
             this.Lives2.Location = new System.Drawing.Point(216, 254);
@@ -1647,7 +1645,6 @@ namespace PacMan
             // Lives3
             // 
             this.Lives3.BackColor = System.Drawing.Color.Transparent;
-            this.Lives3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Lives3.BackgroundImage")));
             this.Lives3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Lives3.Location = new System.Drawing.Point(191, 254);
             this.Lives3.Name = "Lives3";
