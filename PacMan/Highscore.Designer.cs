@@ -29,7 +29,6 @@ namespace PacMan
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Highscore));
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@ namespace PacMan
             this.txtName4 = new System.Windows.Forms.Label();
             this.txtName3 = new System.Windows.Forms.Label();
             this.txtName2 = new System.Windows.Forms.Label();
-            this.Update = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -268,12 +266,6 @@ namespace PacMan
             this.txtName2.Text = "___";
             this.txtName2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Update
-            // 
-            this.Update.Enabled = true;
-            this.Update.Interval = 1;
-            this.Update.Tick += new System.EventHandler(this.Update_Tick);
-            // 
             // Highscore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +321,5 @@ namespace PacMan
         private System.Windows.Forms.Label txtName4;
         private System.Windows.Forms.Label txtName3;
         private System.Windows.Forms.Label txtName2;
-        private System.Windows.Forms.Timer Update;
     }
 }

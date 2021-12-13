@@ -196,16 +196,7 @@ namespace PacMan
                 lblScore5.Text = "0" + Properties.Settings.Default.High5.ToString();
             }
             #endregion
-            #endregion
-            
-        }
-
-        private void Update_Tick(object sender, EventArgs e)
-        {   
-
-               
-               
-            
+            #endregion           
         }
     }
 }
