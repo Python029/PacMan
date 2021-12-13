@@ -29,6 +29,7 @@ namespace PacMan
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Highscore));
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -36,18 +37,19 @@ namespace PacMan
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblScore = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblScore1 = new System.Windows.Forms.Label();
+            this.lblScore4 = new System.Windows.Forms.Label();
+            this.lblScore3 = new System.Windows.Forms.Label();
+            this.lblScore2 = new System.Windows.Forms.Label();
+            this.lblScore5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.txtName1 = new System.Windows.Forms.Label();
+            this.txtName5 = new System.Windows.Forms.Label();
+            this.txtName4 = new System.Windows.Forms.Label();
+            this.txtName3 = new System.Windows.Forms.Label();
+            this.txtName2 = new System.Windows.Forms.Label();
+            this.Update = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -122,60 +124,60 @@ namespace PacMan
             this.label5.TabIndex = 9;
             this.label5.Text = "2nD";
             // 
-            // lblScore
+            // lblScore1
             // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(179, 80);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(126, 25);
-            this.lblScore.TabIndex = 91;
-            this.lblScore.Text = "000000";
+            this.lblScore1.AutoSize = true;
+            this.lblScore1.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore1.ForeColor = System.Drawing.Color.White;
+            this.lblScore1.Location = new System.Drawing.Point(179, 80);
+            this.lblScore1.Name = "lblScore1";
+            this.lblScore1.Size = new System.Drawing.Size(126, 25);
+            this.lblScore1.TabIndex = 91;
+            this.lblScore1.Text = "000000";
             // 
-            // label7
+            // lblScore4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(179, 187);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 25);
-            this.label7.TabIndex = 92;
-            this.label7.Text = "000000";
+            this.lblScore4.AutoSize = true;
+            this.lblScore4.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore4.ForeColor = System.Drawing.Color.White;
+            this.lblScore4.Location = new System.Drawing.Point(179, 187);
+            this.lblScore4.Name = "lblScore4";
+            this.lblScore4.Size = new System.Drawing.Size(126, 25);
+            this.lblScore4.TabIndex = 92;
+            this.lblScore4.Text = "000000";
             // 
-            // label8
+            // lblScore3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(179, 152);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 25);
-            this.label8.TabIndex = 93;
-            this.label8.Text = "000000";
+            this.lblScore3.AutoSize = true;
+            this.lblScore3.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore3.ForeColor = System.Drawing.Color.White;
+            this.lblScore3.Location = new System.Drawing.Point(179, 152);
+            this.lblScore3.Name = "lblScore3";
+            this.lblScore3.Size = new System.Drawing.Size(126, 25);
+            this.lblScore3.TabIndex = 93;
+            this.lblScore3.Text = "000000";
             // 
-            // label9
+            // lblScore2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(179, 116);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 25);
-            this.label9.TabIndex = 94;
-            this.label9.Text = "000000";
+            this.lblScore2.AutoSize = true;
+            this.lblScore2.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore2.ForeColor = System.Drawing.Color.White;
+            this.lblScore2.Location = new System.Drawing.Point(179, 116);
+            this.lblScore2.Name = "lblScore2";
+            this.lblScore2.Size = new System.Drawing.Size(126, 25);
+            this.lblScore2.TabIndex = 94;
+            this.lblScore2.Text = "000000";
             // 
-            // label10
+            // lblScore5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(179, 222);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 25);
-            this.label10.TabIndex = 95;
-            this.label10.Text = "000000";
+            this.lblScore5.AutoSize = true;
+            this.lblScore5.Font = new System.Drawing.Font("Emulogic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore5.ForeColor = System.Drawing.Color.White;
+            this.lblScore5.Location = new System.Drawing.Point(179, 222);
+            this.lblScore5.Name = "lblScore5";
+            this.lblScore5.Size = new System.Drawing.Size(126, 25);
+            this.lblScore5.TabIndex = 95;
+            this.lblScore5.Text = "000000";
             // 
             // label11
             // 
@@ -201,65 +203,76 @@ namespace PacMan
             this.label12.TabIndex = 97;
             this.label12.Text = "Score";
             // 
-            // label13
+            // txtName1
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(396, 78);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 27);
-            this.label13.TabIndex = 98;
-            this.label13.Text = "___";
+            this.txtName1.AutoSize = true;
+            this.txtName1.BackColor = System.Drawing.Color.Transparent;
+            this.txtName1.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName1.ForeColor = System.Drawing.Color.White;
+            this.txtName1.Location = new System.Drawing.Point(396, 78);
+            this.txtName1.Name = "txtName1";
+            this.txtName1.Size = new System.Drawing.Size(75, 27);
+            this.txtName1.TabIndex = 98;
+            this.txtName1.Text = "___";
+            this.txtName1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // txtName5
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(396, 220);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 27);
-            this.label14.TabIndex = 99;
-            this.label14.Text = "___";
+            this.txtName5.AutoSize = true;
+            this.txtName5.BackColor = System.Drawing.Color.Transparent;
+            this.txtName5.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName5.ForeColor = System.Drawing.Color.White;
+            this.txtName5.Location = new System.Drawing.Point(396, 220);
+            this.txtName5.Name = "txtName5";
+            this.txtName5.Size = new System.Drawing.Size(75, 27);
+            this.txtName5.TabIndex = 99;
+            this.txtName5.Text = "___";
+            this.txtName5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // txtName4
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(396, 185);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 27);
-            this.label15.TabIndex = 100;
-            this.label15.Text = "___";
+            this.txtName4.AutoSize = true;
+            this.txtName4.BackColor = System.Drawing.Color.Transparent;
+            this.txtName4.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName4.ForeColor = System.Drawing.Color.White;
+            this.txtName4.Location = new System.Drawing.Point(396, 185);
+            this.txtName4.Name = "txtName4";
+            this.txtName4.Size = new System.Drawing.Size(75, 27);
+            this.txtName4.TabIndex = 100;
+            this.txtName4.Text = "___";
+            this.txtName4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // txtName3
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(396, 150);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 27);
-            this.label16.TabIndex = 101;
-            this.label16.Text = "___";
+            this.txtName3.AutoSize = true;
+            this.txtName3.BackColor = System.Drawing.Color.Transparent;
+            this.txtName3.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName3.ForeColor = System.Drawing.Color.White;
+            this.txtName3.Location = new System.Drawing.Point(396, 150);
+            this.txtName3.Name = "txtName3";
+            this.txtName3.Size = new System.Drawing.Size(75, 27);
+            this.txtName3.TabIndex = 101;
+            this.txtName3.Text = "___";
+            this.txtName3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // txtName2
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(396, 114);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 27);
-            this.label17.TabIndex = 102;
-            this.label17.Text = "___";
+            this.txtName2.AutoSize = true;
+            this.txtName2.BackColor = System.Drawing.Color.Transparent;
+            this.txtName2.Font = new System.Drawing.Font("Emulogic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName2.ForeColor = System.Drawing.Color.White;
+            this.txtName2.Location = new System.Drawing.Point(396, 114);
+            this.txtName2.Name = "txtName2";
+            this.txtName2.Size = new System.Drawing.Size(75, 27);
+            this.txtName2.TabIndex = 102;
+            this.txtName2.Text = "___";
+            this.txtName2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Update
+            // 
+            this.Update.Enabled = true;
+            this.Update.Interval = 1;
+            this.Update.Tick += new System.EventHandler(this.Update_Tick);
             // 
             // Highscore
             // 
@@ -267,18 +280,18 @@ namespace PacMan
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(506, 255);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtName2);
+            this.Controls.Add(this.txtName3);
+            this.Controls.Add(this.txtName4);
+            this.Controls.Add(this.txtName5);
+            this.Controls.Add(this.txtName1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.lblScore5);
+            this.Controls.Add(this.lblScore2);
+            this.Controls.Add(this.lblScore3);
+            this.Controls.Add(this.lblScore4);
+            this.Controls.Add(this.lblScore1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -288,7 +301,9 @@ namespace PacMan
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Highscore";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leaderboard";
+            this.Load += new System.EventHandler(this.Highscore_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,17 +317,18 @@ namespace PacMan
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblScore1;
+        private System.Windows.Forms.Label lblScore4;
+        private System.Windows.Forms.Label lblScore3;
+        private System.Windows.Forms.Label lblScore2;
+        private System.Windows.Forms.Label lblScore5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label txtName1;
+        private System.Windows.Forms.Label txtName5;
+        private System.Windows.Forms.Label txtName4;
+        private System.Windows.Forms.Label txtName3;
+        private System.Windows.Forms.Label txtName2;
+        private System.Windows.Forms.Timer Update;
     }
 }

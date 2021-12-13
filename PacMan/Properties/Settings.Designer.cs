@@ -38,9 +38,9 @@ namespace PacMan.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string Score {
+        public int Score {
             get {
-                return ((string)(this["Score"]));
+                return ((int)(this["Score"]));
             }
             set {
                 this["Score"] = value;

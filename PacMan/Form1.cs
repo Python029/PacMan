@@ -339,6 +339,7 @@ namespace PacMan
         {
             if(score>Properties.Settings.Default.High1)
             {
+                Properties.Settings.Default.Score = score;
                 tmrUpdate.Enabled = false;
                 MoveAndAnimate.Enabled = false;
                 f2.ShowDialog();
