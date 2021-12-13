@@ -26,7 +26,7 @@ namespace PacMan
         int life = 2;
         bool u = false; bool d = false; bool l = false; bool r = false;
         bool pu = false; bool pd = false; bool pl = false; bool pr = false;
-        bool ru = false; bool rd = false; bool rl = false; bool rr = false;
+        bool ru = false; bool rd = false; bool rl = false; bool rr = false; bool rlr = false; bool rud = false;
         bool bu = false; bool bd = false; bool bl = false; bool br = false;
         bool ou = false; bool od = false; bool ol = false; bool or = false;
         bool pStart = false; bool rStart = false; bool bStart = false; bool oStart = false;
@@ -105,6 +105,14 @@ namespace PacMan
             }
             #endregion
             #region High Score
+            if (Properties.Settings.Default.High1 ==0)
+            {
+                lblHScore.Text = "000000";
+            }
+            if (Properties.Settings.Default.High1 > 0 && Properties.Settings.Default.High1 < 10)
+            {
+                lblHScore.Text = "00000" + Properties.Settings.Default.High1.ToString();
+            }
             if (Properties.Settings.Default.High1 >= 10 && Properties.Settings.Default.High1 < 100)
             {
                 lblHScore.Text = "0000" + Properties.Settings.Default.High1.ToString();
@@ -359,6 +367,14 @@ namespace PacMan
                 Player.Left = 163;
             }
         }
+        private void Reset()
+        {
+            if (pellets.Count == 0 && Bpellets.Count == 0)
+            {
+                Properties.Settings.Default.Score = score;
+                Properties.Settings.Default.Lives = life;
+            }
+        }
         #region Ghost Movement
         private void PinkGhost()
         {
@@ -379,35 +395,26 @@ namespace PacMan
             else if (rStart == true)
             {
                 #region AI
-                if (Player.Location.X < Blinky.Location.X)
-                {
-                    rl = true;
-                    rr = false;
-                }
-                if (Player.Location.X > Blinky.Location.X)
-                {
-                    rl = false;
-                    rr = true;
-                }
                 if (Player.Location.Y < Blinky.Location.Y)
                 {
                     ru = true;
                     rd = false;
                 }
-                if (Player.Location.Y > Blinky.Location.Y)
+                else if (Player.Location.Y > Blinky.Location.Y)
                 {
                     ru = false;
                     rd = true;
                 }
-                if (Player.Location.X == Blinky.Location.X)
+                if (Player.Location.X < Blinky.Location.X)
                 {
-                    rl = false;
+                    rl = true;
                     rr = false;
                 }
-                if (Player.Location.Y == Blinky.Location.X)
+                else if (Player.Location.X > Blinky.Location.X)
                 {
-                    ru = false;
-                    rd = false;
+                    rl = false;
+                    rr = true;
+                    rlr = true;
                 }
                 #endregion
                 #region Booleans
@@ -458,6 +465,7 @@ namespace PacMan
             Start();
             LoadPellets();
             Lives();
+            Reset();
         }
 
         private void pictureBox132_Click(object sender, EventArgs e)
