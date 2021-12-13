@@ -29,6 +29,7 @@ namespace PacMan
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Highscore));
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -210,7 +211,7 @@ namespace PacMan
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(75, 27);
             this.label13.TabIndex = 98;
-            this.label13.Text = "AAA";
+            this.label13.Text = "___";
             // 
             // label14
             // 
@@ -222,7 +223,7 @@ namespace PacMan
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(75, 27);
             this.label14.TabIndex = 99;
-            this.label14.Text = "AAA";
+            this.label14.Text = "___";
             // 
             // label15
             // 
@@ -234,7 +235,7 @@ namespace PacMan
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(75, 27);
             this.label15.TabIndex = 100;
-            this.label15.Text = "AAA";
+            this.label15.Text = "___";
             // 
             // label16
             // 
@@ -246,7 +247,7 @@ namespace PacMan
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 27);
             this.label16.TabIndex = 101;
-            this.label16.Text = "AAA";
+            this.label16.Text = "___";
             // 
             // label17
             // 
@@ -258,7 +259,7 @@ namespace PacMan
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 27);
             this.label17.TabIndex = 102;
-            this.label17.Text = "AAA";
+            this.label17.Text = "___";
             // 
             // Highscore
             // 
@@ -285,8 +286,9 @@ namespace PacMan
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Highscore";
-            this.Text = "Highscore";
+            this.Text = "Leaderboard";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,7 +16,7 @@ namespace PacMan
         {
             InitializeComponent();
         }
-        
+        Highscore f2 = new Highscore();
         int p = 0;
         int Speed = 3;
         int pSpeed = 3;
@@ -102,6 +102,24 @@ namespace PacMan
             if (score >= 10000 && score < 100000)
             {
                 lblScore.Text = "0" + score.ToString();
+            }
+            #endregion
+            #region High Score
+            if (Properties.Settings.Default.High1 >= 10 && Properties.Settings.Default.High1 < 100)
+            {
+                lblHScore.Text = "0000" + Properties.Settings.Default.High1.ToString();
+            }
+            if (Properties.Settings.Default.High1 >= 100 && Properties.Settings.Default.High1 < 1000)
+            {
+                lblHScore.Text = "000" + Properties.Settings.Default.High1.ToString();
+            }
+            if (Properties.Settings.Default.High1 >= 1000 && Properties.Settings.Default.High1 < 10000)
+            {
+                lblHScore.Text = "00" + Properties.Settings.Default.High1.ToString();
+            }
+            if (Properties.Settings.Default.High1 >= 10000 && Properties.Settings.Default.High1 < 100000)
+            {
+                lblHScore.Text = "0" + Properties.Settings.Default.High1.ToString();
             }
             #endregion
         }
@@ -319,7 +337,13 @@ namespace PacMan
         }
         private void GameOver()
         {
-            if(score>Properties.Settings.)
+            if(score>Properties.Settings.Default.High1)
+            {
+                tmrUpdate.Enabled = false;
+                MoveAndAnimate.Enabled = false;
+                f2.ShowDialog();
+                
+            }
         }
         private void Teleport()
         {
@@ -433,6 +457,13 @@ namespace PacMan
             Start();
             LoadPellets();
             Lives();
+        }
+
+        private void pictureBox132_Click(object sender, EventArgs e)
+        {
+            f2.ShowDialog();
+            tmrUpdate.Stop();
+            MoveAndAnimate.Stop();
         }
     }
 }
