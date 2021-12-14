@@ -5,7 +5,7 @@
     <Setting Name="Lives" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="Score" Type="System.Int32" Scope="User">
+    <Setting Name="SScore" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="High1" Type="System.Int32" Scope="User">
@@ -37,6 +37,9 @@
     </Setting>
     <Setting Name="Name5" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Start" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -39,7 +39,6 @@ namespace PacMan
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //DoubleBuffer/Smoother Animation Code:this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.SetStyle(ControlStyles.DoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -47,6 +46,13 @@ namespace PacMan
             this.UpdateStyles();
             ghosts = new PictureBox[] { Pinky, Blinky };
             walls = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox33, pictureBox34, pictureBox35, pictureBox36, pictureBox37, pictureBox38, pictureBox39, pictureBox40, pictureBox41, pictureBox42, pictureBox43, pictureBox44, pictureBox45, pictureBox46 };
+            if(Properties.Settings.Default.Start)
+            {
+                score = Properties.Settings.Default.SScore;
+                life = Properties.Settings.Default.Lives;
+                tmrUpdate.Enabled = true;
+                MoveAndAnimate.Enabled = true;
+            }
         }
         private void LoadPellets()
         {
@@ -347,7 +353,7 @@ namespace PacMan
         {
             if(score>Properties.Settings.Default.High1)
             {
-                Properties.Settings.Default.Score = score;
+                Properties.Settings.Default.SScore = score;
                 tmrUpdate.Enabled = false;
                 MoveAndAnimate.Enabled = false;
                 f2.ShowDialog();
@@ -368,12 +374,15 @@ namespace PacMan
             }
         }
         private void Reset()
-        {
-            if (pellets.Count == 0 && Bpellets.Count == 0)
-            {
-                Properties.Settings.Default.Score = score;
-                Properties.Settings.Default.Lives = life;
-            }
+        {       
+                if (pellets.Count == 0 && Bpellets.Count == 0 && life >= 0)
+                {
+                    Properties.Settings.Default.SScore = score;
+                    Properties.Settings.Default.Lives = life;
+                    tmrUpdate.Enabled = false;
+                    MoveAndAnimate.Enabled = false;
+                    Application.Restart();
+                }
         }
         #region Ghost Movement
         private void PinkGhost()
@@ -465,7 +474,7 @@ namespace PacMan
             Start();
             LoadPellets();
             Lives();
-            Reset();
+            //Reset();
         }
 
         private void pictureBox132_Click(object sender, EventArgs e)

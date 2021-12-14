@@ -29,7 +29,7 @@ namespace PacMan
             Properties.Settings.Default.High3 = Properties.Settings.Default.High2;
             Properties.Settings.Default.High2 = Properties.Settings.Default.High1;
             #endregion
-            Properties.Settings.Default.High1 = Properties.Settings.Default.Score;
+            Properties.Settings.Default.High1 = Properties.Settings.Default.SScore;
             f3.ShowDialog();
             #region Names
             txtName1.Text = Properties.Settings.Default.Name1;
