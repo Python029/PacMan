@@ -339,7 +339,7 @@ namespace PacMan
             this.Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Player.BackgroundImage")));
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Player.Image = global::PacMan.Properties.Resources.PacManL1;
-            this.Player.Location = new System.Drawing.Point(402, 349);
+            this.Player.Location = new System.Drawing.Point(523, 399);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(19, 19);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -822,7 +822,7 @@ namespace PacMan
             this.Blinky.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Blinky.BackgroundImage")));
             this.Blinky.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Blinky.Image = global::PacMan.Properties.Resources.RedUp;
-            this.Blinky.Location = new System.Drawing.Point(402, 302);
+            this.Blinky.Location = new System.Drawing.Point(523, 174);
             this.Blinky.Name = "Blinky";
             this.Blinky.Size = new System.Drawing.Size(19, 19);
             this.Blinky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

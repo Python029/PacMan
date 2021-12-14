@@ -29,7 +29,7 @@ namespace PacMan
         bool ru = false; bool rd = false; bool rl = false; bool rr = false; bool rlr = false; bool rud = false;
         bool bu = false; bool bd = false; bool bl = false; bool br = false;
         bool ou = false; bool od = false; bool ol = false; bool or = false;
-        bool pStart = false; bool rStart = false; bool bStart = false; bool oStart = false;
+        bool pStart = false; bool rStart = true; bool bStart = false; bool oStart = false;
         bool pChange = false; bool rChange = false;
         int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0;
         PictureBox[] walls;
@@ -329,9 +329,16 @@ namespace PacMan
                         {
                             if (rl) { Blinky.Left -= rSpeed; }
                             else if (rr) { Blinky.Left += rSpeed; }
+                            ru = false; rd = false;
                             rChange = false;
                         }
-                        
+                        if (rl == true || rr == true)
+                        {
+                            if (ru) { Blinky.Left -= rSpeed; }
+                            else if (rd) { Blinky.Left += rSpeed; }
+                            rl = false; rr = false;
+                            rChange = false;
+                        }
                     }
                 }
                 if (Player.Bounds.IntersectsWith(GhostWall.Bounds))
@@ -401,7 +408,7 @@ namespace PacMan
             {
                 Blinky.Top -= rSpeed;
             }
-            else if (rStart == true)
+            else if (rStart == true&&rChange==false)
             {
                 #region AI
                 if (Player.Location.Y < Blinky.Location.Y)
@@ -422,18 +429,14 @@ namespace PacMan
                 else if (Player.Location.X > Blinky.Location.X)
                 {
                     rl = false;
-                    rr = true;
-                    rlr = true;
+                    rr = true;                    
                 }
                 #endregion
                 #region Booleans
-                if (rChange == false)
-                {
                     if (ru) { Blinky.Top -= rSpeed; rChange = true; }
                     else if (rd) { Blinky.Top += rSpeed; rChange = true; }
                     if (rl) { Blinky.Left -= rSpeed; rChange = true; }
-                    else if (rr) { Blinky.Left += rSpeed; rChange = true; }
-                }
+                    else if (rr) { Blinky.Left += rSpeed; rChange = true; }               
                 #endregion
             }
         }
