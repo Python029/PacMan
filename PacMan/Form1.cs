@@ -22,8 +22,8 @@ namespace PacMan
         int pSpeed = 3;
         int rSpeed = 3;
         bool pellet = false;
-        int score = 0;
-        int life = 2;
+        int score;
+        int life;
         bool u = false; bool d = false; bool l = false; bool r = false;
         bool pu = false; bool pd = false; bool pl = false; bool pr = false;
         bool ru = false; bool rd = false; bool rl = false; bool rr = false; bool rlr = false; bool rud = false;
@@ -46,7 +46,14 @@ namespace PacMan
             this.UpdateStyles();
             ghosts = new PictureBox[] { Pinky, Blinky };
             walls = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox33, pictureBox34, pictureBox35, pictureBox36, pictureBox37, pictureBox38, pictureBox39, pictureBox40, pictureBox41, pictureBox42, pictureBox43, pictureBox44, pictureBox45, pictureBox46 };
-            if(Properties.Settings.Default.Start)
+            if(Properties.Settings.Default.Start == false)
+            {
+                score = 0;
+                life = 2;
+                Properties.Settings.Default.SScore = 0;
+                Properties.Settings.Default.Lives = 2;
+            }
+            else if(Properties.Settings.Default.Start)
             {
                 score = Properties.Settings.Default.SScore;
                 life = Properties.Settings.Default.Lives;
@@ -111,7 +118,7 @@ namespace PacMan
             }
             #endregion
             #region High Score
-            if (Properties.Settings.Default.High1 ==0)
+            if (Properties.Settings.Default.High1 == 0)
             {
                 lblHScore.Text = "000000";
             }
@@ -363,8 +370,11 @@ namespace PacMan
                 Properties.Settings.Default.SScore = score;
                 tmrUpdate.Enabled = false;
                 MoveAndAnimate.Enabled = false;
-                f2.ShowDialog();
-                
+                f2.ShowDialog();                
+            }
+            else if(score < Properties.Settings.Default.High1)
+            {
+
             }
         }
         private void Teleport()
@@ -382,14 +392,18 @@ namespace PacMan
         }
         private void Reset()
         {       
-                if (pellets.Count == 0 && Bpellets.Count == 0 && life >= 0)
-                {
-                    Properties.Settings.Default.SScore = score;
-                    Properties.Settings.Default.Lives = life;
-                    tmrUpdate.Enabled = false;
-                    MoveAndAnimate.Enabled = false;
-                    Application.Restart();
-                }
+            if (pellets.Count == 0 && Bpellets.Count == 0 && life >= 0)
+            {
+                Properties.Settings.Default.SScore = score;
+                Properties.Settings.Default.Lives = life;
+                
+                tmrUpdate.Enabled = false;
+                MoveAndAnimate.Enabled = false;
+                Properties.Settings.Default.Save();
+                System.Diagnostics.Process.Start(Application.ExecutablePath);
+                Properties.Settings.Default.Start = true;
+                Application.Exit();
+            }
         }
         #region Ghost Movement
         private void PinkGhost()
@@ -477,7 +491,7 @@ namespace PacMan
             Start();
             LoadPellets();
             Lives();
-            //Reset();
+            Reset();
         }
 
         private void pictureBox132_Click(object sender, EventArgs e)
