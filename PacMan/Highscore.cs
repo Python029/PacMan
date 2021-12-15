@@ -17,6 +17,7 @@ namespace PacMan
         {
             InitializeComponent();
         }
+        bool restart = false;
         private void Highscore_Load(object sender, EventArgs e)
         {
             #region Update
@@ -197,6 +198,29 @@ namespace PacMan
             }
             #endregion
             #endregion           
+        }
+
+        private void Highscore_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (restart == false)
+            {
+                restart = true;
+                DialogResult dialogResult = MessageBox.Show("Do you want to play again?", "Play Again?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Application.Restart();
+                    Properties.Settings.Default.Save();                    
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
+                    Properties.Settings.Default.Save();
+                }
+            }
+            else if(restart)
+            {
+                Application.Exit();
+            }
         }
     }
 }

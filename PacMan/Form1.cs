@@ -17,6 +17,7 @@ namespace PacMan
             InitializeComponent();
         }
         Highscore f2 = new Highscore();
+        Form3 f3 = new Form3();
         int p = 0;
         int Speed = 3;
         int pSpeed = 3;
@@ -37,6 +38,7 @@ namespace PacMan
         List<PictureBox> pellets = new List<PictureBox>();
         List<PictureBox> Bpellets = new List<PictureBox>();
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.SetStyle(ControlStyles.DoubleBuffer, true);
@@ -46,19 +48,24 @@ namespace PacMan
             this.UpdateStyles();
             ghosts = new PictureBox[] { Pinky, Blinky };
             walls = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox33, pictureBox34, pictureBox35, pictureBox36, pictureBox37, pictureBox38, pictureBox39, pictureBox40, pictureBox41, pictureBox42, pictureBox43, pictureBox44, pictureBox45, pictureBox46 };
-            if(Properties.Settings.Default.Start == false)
+            if (Properties.Settings.Default.Start == false)
             {
-                score = 0;
-                life = 2;
                 Properties.Settings.Default.SScore = 0;
                 Properties.Settings.Default.Lives = 2;
+                score = 0;
+                life = 2;
+                tmrUpdate.Enabled = true;
+                MoveAndAnimate.Enabled = true;
+                Properties.Settings.Default.Start = true;
+
             }
-            else if(Properties.Settings.Default.Start)
+            else if (Properties.Settings.Default.Start)
             {
                 score = Properties.Settings.Default.SScore;
                 life = Properties.Settings.Default.Lives;
                 tmrUpdate.Enabled = true;
                 MoveAndAnimate.Enabled = true;
+                Properties.Settings.Default.Start = false;               
             }
         }
         private void LoadPellets()
@@ -262,6 +269,8 @@ namespace PacMan
             if(e.KeyCode == Keys.S || e.KeyCode == Keys.Down) { d = true; }
             if(e.KeyCode == Keys.A || e.KeyCode == Keys.Left) { l = true; }
             if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right) { r = true; }
+            if(e.KeyCode==Keys.Subtract)
+            { Properties.Settings.Default.Reset(); }
         }
         #endregion
         private void WallCollision()
@@ -374,8 +383,11 @@ namespace PacMan
             }
             else if(score < Properties.Settings.Default.High1)
             {
-
+                Application.Exit();
             }
+            Properties.Settings.Default.Start = false;
+            Properties.Settings.Default.SScore = 0;
+            Properties.Settings.Default.Lives = 2;
         }
         private void Teleport()
         {
@@ -395,15 +407,15 @@ namespace PacMan
             if (pellets.Count == 0 && Bpellets.Count == 0 && life >= 0)
             {
                 Properties.Settings.Default.SScore = score;
-                Properties.Settings.Default.Lives = life;
-                
+                Properties.Settings.Default.Lives = life;                
                 tmrUpdate.Enabled = false;
                 MoveAndAnimate.Enabled = false;
-                Properties.Settings.Default.Save();
-                System.Diagnostics.Process.Start(Application.ExecutablePath);
                 Properties.Settings.Default.Start = true;
+                Properties.Settings.Default.Save();
+                System.Diagnostics.Process.Start(Application.ExecutablePath); 
                 Application.Exit();
             }
+
         }
         #region Ghost Movement
         private void PinkGhost()
@@ -475,11 +487,14 @@ namespace PacMan
             }
             else if (life == 2)
             {
+                Lives1.Image = Properties.Resources.PacManL1;
                 Lives2.Image = Properties.Resources.PacManL1;
                 Lives3.Image = null;
             }
             else if (life == 3)
             {
+                Lives1.Image = Properties.Resources.PacManL1;
+                Lives2.Image = Properties.Resources.PacManL1;
                 Lives3.Image = Properties.Resources.PacManL1;
             }
         }
@@ -499,6 +514,22 @@ namespace PacMan
             f2.ShowDialog();
             tmrUpdate.Stop();
             MoveAndAnimate.Stop();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.SScore = score;
+            Properties.Settings.Default.Lives = life;
+            if (pellets.Count > 0 && Bpellets.Count > 0)
+            {
+                Properties.Settings.Default.Start = false;
+            }
+            Properties.Settings.Default.Save();
+        }
+
+        private void pictureBox48_Click(object sender, EventArgs e)
+        {
+            f3.ShowDialog();
         }
     }
 }

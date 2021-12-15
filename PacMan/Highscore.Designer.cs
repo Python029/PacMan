@@ -295,6 +295,7 @@ namespace PacMan
             this.Name = "Highscore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leaderboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Highscore_FormClosing);
             this.Load += new System.EventHandler(this.Highscore_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

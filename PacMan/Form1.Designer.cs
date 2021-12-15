@@ -775,6 +775,7 @@ namespace PacMan
             this.pictureBox48.Size = new System.Drawing.Size(47, 43);
             this.pictureBox48.TabIndex = 51;
             this.pictureBox48.TabStop = false;
+            this.pictureBox48.Click += new System.EventHandler(this.pictureBox48_Click);
             // 
             // GhostWall
             // 
@@ -822,7 +823,7 @@ namespace PacMan
             this.Blinky.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Blinky.BackgroundImage")));
             this.Blinky.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Blinky.Image = global::PacMan.Properties.Resources.RedUp;
-            this.Blinky.Location = new System.Drawing.Point(523, 174);
+            this.Blinky.Location = new System.Drawing.Point(402, 302);
             this.Blinky.Name = "Blinky";
             this.Blinky.Size = new System.Drawing.Size(19, 19);
             this.Blinky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1826,6 +1827,7 @@ namespace PacMan
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pac Man";
             this.TransparencyKey = System.Drawing.Color.Indigo;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
