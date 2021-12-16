@@ -170,5 +170,17 @@
   <ItemGroup>
     <None Include="Resources\CatDerik.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Odown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oup.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
