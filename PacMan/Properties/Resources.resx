@@ -205,4 +205,16 @@
   <data name="BlueUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BlueUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GreenDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

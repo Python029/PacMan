@@ -24,22 +24,20 @@ namespace PacMan
         int orange = 0;
         int red = 0;
         int blue = 0;
+        int green = 0;
         int p = 0;
         int Speed = 3;
         int pSpeed = 3;
         int oSpeed = 3;
         int rSpeed = 3;
+        int bSpeed = 3;
+        int gSpeed = 3;
         bool pellet = false;
         int score;
         int life;
         bool u = false; bool d = false; bool l = false; bool r = false;
-        bool pu = false; bool pd = false; bool pl = false; bool pr = false;
-        bool ru = false; bool rd = false; bool rl = false; bool rr = false; bool rlr = false; bool rud = false;
-        bool bu = false; bool bd = false; bool bl = false; bool br = false;
-        bool ou = false; bool od = false; bool ol = false; bool or = false;
-        bool pStart = false; bool rStart = false; bool bStart = false; bool oStart = false;
-        bool pChange = false; bool rChange = false; bool oChange = false; bool bChange = false;
-        int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0; int ox = 0; int oy = 0;
+        bool pStart = false; bool rStart = false; bool bStart = false; bool oStart = false; bool gStart = false;
+        int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0; int ox = 0; int oy = 0; int bx = 0; int by=0; int gx = 0; int gy = 0;
         PictureBox[] walls;
         PictureBox[] ghosts;
         List<PictureBox> pellets = new List<PictureBox>();
@@ -53,7 +51,7 @@ namespace PacMan
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.UpdateStyles();
-            ghosts = new PictureBox[] { Pinky, Blinky };
+            ghosts = new PictureBox[] { Pinky, Blinky, Clyde, Inky, Slimy };
             walls = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox33, pictureBox34, pictureBox35, pictureBox36, pictureBox37, pictureBox38, pictureBox39, pictureBox40, pictureBox41, pictureBox42, pictureBox43, pictureBox44, pictureBox45, pictureBox46 };
             if (Properties.Settings.Default.Start == false)
             {
@@ -76,6 +74,9 @@ namespace PacMan
             }
             Pinky.Location = new Point(402, 302);
             Clyde.Location = new Point(402, 302);
+            Inky.Location = new Point(402, 302);
+            Slimy.Location = new Point(402, 302);
+
         }
         private void LoadPellets()
         {
@@ -170,6 +171,11 @@ namespace PacMan
             ry = Blinky.Location.Y;
             ox = Clyde.Location.X;
             oy = Clyde.Location.Y;
+            bx = Inky.Location.X;
+            by = Inky.Location.Y;
+            gx = Slimy.Location.X;
+            gy = Slimy.Location.Y;
+
             #region Animation
             if (u)
             {
@@ -264,6 +270,8 @@ namespace PacMan
             PinkGhost();
             RedGhost();
             OrangeGhost();
+            BlueGhost();
+            GreenGhost();
             #endregion
         }
         #region Movement
@@ -333,14 +341,12 @@ namespace PacMan
                     {
                         pink = rnd.Next(1, 5);
                         Pinky.Location = new Point(px, py);
-                        pChange = false;
                     }
                 }
                 if (Pinky.Bounds.IntersectsWith(GhostWall.Bounds) && pStart==true)
                 {
                     Pinky.Location = new Point(px, py);
                     pink = rnd.Next(3, 5);
-                    pChange=false;
                 }
                 if (Pinky.Bounds.IntersectsWith(Corridor1.Bounds) || Pinky.Bounds.IntersectsWith(Corridor2.Bounds))
                 {
@@ -358,14 +364,12 @@ namespace PacMan
                     {
                         orange = rnd.Next(1, 5);
                         Clyde.Location = new Point(ox, oy);
-                        oChange = false;
                     }
                 }
                 if (Clyde.Bounds.IntersectsWith(GhostWall.Bounds) && oStart == true)
                 {
                     Clyde.Location = new Point(ox, oy);
                     orange = rnd.Next(3, 5);
-                    oChange = false;
                 }
                 if (Clyde.Bounds.IntersectsWith(Corridor1.Bounds) || Clyde.Bounds.IntersectsWith(Corridor2.Bounds))
                 {
@@ -376,6 +380,52 @@ namespace PacMan
                     oSpeed = 3;
                 }
                 #endregion
+                #region Blue Ghost
+                for (int i = 0; i < walls.Length; i++)
+                {
+                    if (Inky.Bounds.IntersectsWith(walls[i].Bounds) && bStart == true)
+                    {
+                        blue = rnd.Next(1, 5);
+                        Inky.Location = new Point(bx, by);
+                    }
+                }
+                if (Inky.Bounds.IntersectsWith(GhostWall.Bounds) && bStart == true)
+                {
+                    Inky.Location = new Point(bx, by);
+                    blue = rnd.Next(3, 5);
+                }
+                if (Inky.Bounds.IntersectsWith(Corridor1.Bounds) || Inky.Bounds.IntersectsWith(Corridor2.Bounds))
+                {
+                    bSpeed = 2;
+                }
+                else
+                {
+                    bSpeed = 3;
+                }
+                #endregion
+                #region Green Ghost
+                for (int i = 0; i < walls.Length; i++)
+                {
+                    if (Slimy.Bounds.IntersectsWith(walls[i].Bounds) && gStart == true)
+                    {
+                        green = rnd.Next(1, 5);
+                        Slimy.Location = new Point(gx, gy);
+                    }
+                }
+                if (Slimy.Bounds.IntersectsWith(GhostWall.Bounds) && gStart == true)
+                {
+                    Slimy.Location = new Point(gx, gy);
+                    green = rnd.Next(3, 5);
+                }
+                if (Slimy.Bounds.IntersectsWith(Corridor1.Bounds) || Slimy.Bounds.IntersectsWith(Corridor2.Bounds))
+                {
+                    gSpeed = 2;
+                }
+                else
+                {
+                    gSpeed = 3;
+                }
+                #endregion
                 #region Red Ghost
                 for (int i = 0; i < walls.Length; i++)
                 {
@@ -383,14 +433,12 @@ namespace PacMan
                     {
                         red = rnd.Next(1, 5);
                         Blinky.Location = new Point(rx, ry);
-                        rChange = false;
                     }
                 }
                 if (Blinky.Bounds.IntersectsWith(GhostWall.Bounds) && rStart == true)
                 {
-                    Blinky.Location = new Point(px, py);
+                    Blinky.Location = new Point(rx, ry);
                     red = rnd.Next(3, 5);
-                    rChange = false;
                 }
                 if (Blinky.Bounds.IntersectsWith(Corridor1.Bounds) || Blinky.Bounds.IntersectsWith(Corridor2.Bounds))
                 {
@@ -399,8 +447,7 @@ namespace PacMan
                 else
                 {
                     rSpeed = 3;
-                }
-                
+                }               
                 #endregion
             }
         }
@@ -452,8 +499,6 @@ namespace PacMan
         #region Ghost Movement
         private void PinkGhost()
         {
-            #region AI
-            
             if (rStart == true)
             {
                 if (pStart == false)
@@ -466,13 +511,56 @@ namespace PacMan
                     }
                 }
             }
-            #endregion
             if (pStart == true)
             {              
                 if (pink == 1) { Pinky.Top -= pSpeed; Pinky.Image = Properties.Resources.PinkUp; }
                 else if (pink == 2) { Pinky.Top += pSpeed; Pinky.Image = Properties.Resources.PinkDown; }
                 else if (pink == 3) { Pinky.Left -= pSpeed; Pinky.Image = Properties.Resources.PinkLeft; }
                 else if (pink == 4) { Pinky.Left += pSpeed; Pinky.Image = Properties.Resources.PinkRight; }
+            }
+        }
+        private void GreenGhost()
+        {
+            if (bStart == true)
+            {
+                if (gStart == false)
+                {
+                    Slimy.Top -= gSpeed;
+                    if (Slimy.Location.Y <= 252)
+                    {
+                        gStart = true;
+                        green = rnd.Next(1, 5);
+                    }
+                }
+            }
+            if (pStart == true)
+            {
+                if (green == 1) { Slimy.Top -= gSpeed; Slimy.Image = Properties.Resources.GreenUp; }
+                else if (green == 2) { Slimy.Top += gSpeed; Slimy.Image = Properties.Resources.GreenDown; }
+                else if (green == 3) { Slimy.Left -= gSpeed; Slimy.Image = Properties.Resources.GreenLeft; }
+                else if (green == 4) { Slimy.Left += gSpeed; Slimy.Image = Properties.Resources.GreenRight; }
+            }
+        }
+        private void BlueGhost()
+        {
+            if (oStart == true)
+            {
+                if (bStart == false)
+                {
+                    Inky.Top -= bSpeed;
+                    if (Inky.Location.Y <= 252)
+                    {
+                        bStart = true;
+                        blue = rnd.Next(1, 5);
+                    }
+                }
+            }
+            if (bStart == true)
+            {
+                if (blue == 1) { Inky.Top -= bSpeed; Inky.Image = Properties.Resources.BlueUp; }
+                else if (blue == 2) { Inky.Top += bSpeed; Inky.Image = Properties.Resources.BlueDown; }
+                else if (blue == 3) { Inky.Left -= bSpeed; Inky.Image = Properties.Resources.BlueLeft; }
+                else if (blue == 4) { Inky.Left += bSpeed; Inky.Image = Properties.Resources.BlueRight; }
             }
         }
         private void OrangeGhost()
@@ -490,7 +578,7 @@ namespace PacMan
                     }
                 }
             }
-            if (oStart == true && oChange == false)
+            if (oStart == true)
             {
                 if (orange == 1) { Clyde.Top -= oSpeed; Clyde.Image = Properties.Resources.Oup; }
                 else if (orange == 2) { Clyde.Top += oSpeed; Clyde.Image = Properties.Resources.Odown; }
@@ -509,7 +597,7 @@ namespace PacMan
                     red = rnd.Next(1, 5);
                 }
             }
-            if (rStart == true&&rChange==false)
+            if (rStart == true)
             {
                 #region Booleans
                 if (red == 1) { Blinky.Top -= rSpeed; Blinky.Image = Properties.Resources.RedUp; }

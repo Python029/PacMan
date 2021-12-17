@@ -178,6 +178,8 @@ namespace PacMan
             this.Lives2 = new System.Windows.Forms.PictureBox();
             this.Lives3 = new System.Windows.Forms.PictureBox();
             this.Clyde = new System.Windows.Forms.PictureBox();
+            this.Inky = new System.Windows.Forms.PictureBox();
+            this.Slimy = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -319,6 +321,8 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.Lives2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lives3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clyde)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Inky)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slimy)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrUpdate
@@ -1670,6 +1674,32 @@ namespace PacMan
             this.Clyde.TabIndex = 148;
             this.Clyde.TabStop = false;
             // 
+            // Inky
+            // 
+            this.Inky.BackColor = System.Drawing.Color.Transparent;
+            this.Inky.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Inky.BackgroundImage")));
+            this.Inky.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Inky.Image = global::PacMan.Properties.Resources.BlueUp;
+            this.Inky.Location = new System.Drawing.Point(375, 302);
+            this.Inky.Name = "Inky";
+            this.Inky.Size = new System.Drawing.Size(19, 19);
+            this.Inky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Inky.TabIndex = 149;
+            this.Inky.TabStop = false;
+            // 
+            // Slimy
+            // 
+            this.Slimy.BackColor = System.Drawing.Color.Transparent;
+            this.Slimy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Slimy.BackgroundImage")));
+            this.Slimy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Slimy.Image = global::PacMan.Properties.Resources.GreenUp;
+            this.Slimy.Location = new System.Drawing.Point(429, 302);
+            this.Slimy.Name = "Slimy";
+            this.Slimy.Size = new System.Drawing.Size(19, 19);
+            this.Slimy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Slimy.TabIndex = 150;
+            this.Slimy.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1678,7 +1708,11 @@ namespace PacMan
             this.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(817, 627);
+            this.Controls.Add(this.Blinky);
+            this.Controls.Add(this.Pinky);
             this.Controls.Add(this.Clyde);
+            this.Controls.Add(this.Inky);
+            this.Controls.Add(this.Slimy);
             this.Controls.Add(this.Lives3);
             this.Controls.Add(this.Lives2);
             this.Controls.Add(this.Lives1);
@@ -1687,8 +1721,6 @@ namespace PacMan
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Blinky);
-            this.Controls.Add(this.Pinky);
             this.Controls.Add(this.GhostWall);
             this.Controls.Add(this.pictureBox48);
             this.Controls.Add(this.pictureBox47);
@@ -1973,6 +2005,8 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.Lives2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lives3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clyde)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Inky)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slimy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2127,6 +2161,8 @@ namespace PacMan
         private System.Windows.Forms.PictureBox Lives2;
         private System.Windows.Forms.PictureBox Lives3;
         private System.Windows.Forms.PictureBox Clyde;
+        private System.Windows.Forms.PictureBox Inky;
+        private System.Windows.Forms.PictureBox Slimy;
     }
 }
 

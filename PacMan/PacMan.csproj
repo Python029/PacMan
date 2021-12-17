@@ -206,5 +206,26 @@
   <ItemGroup>
     <None Include="Resources\Oup.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueDown1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueLeft1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueRight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenUp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
