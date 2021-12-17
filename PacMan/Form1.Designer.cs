@@ -177,7 +177,7 @@ namespace PacMan
             this.Lives1 = new System.Windows.Forms.PictureBox();
             this.Lives2 = new System.Windows.Forms.PictureBox();
             this.Lives3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox132 = new System.Windows.Forms.PictureBox();
+            this.Clyde = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -318,7 +318,7 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.Lives1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lives2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lives3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox132)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Clyde)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrUpdate
@@ -1656,18 +1656,18 @@ namespace PacMan
             this.Lives3.TabIndex = 147;
             this.Lives3.TabStop = false;
             // 
-            // pictureBox132
+            // Clyde
             // 
-            this.pictureBox132.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox132.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox132.BackgroundImage")));
-            this.pictureBox132.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox132.Image = global::PacMan.Properties.Resources.Oup;
-            this.pictureBox132.Location = new System.Drawing.Point(429, 302);
-            this.pictureBox132.Name = "pictureBox132";
-            this.pictureBox132.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox132.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox132.TabIndex = 148;
-            this.pictureBox132.TabStop = false;
+            this.Clyde.BackColor = System.Drawing.Color.Transparent;
+            this.Clyde.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Clyde.BackgroundImage")));
+            this.Clyde.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clyde.Image = global::PacMan.Properties.Resources.Oup;
+            this.Clyde.Location = new System.Drawing.Point(429, 302);
+            this.Clyde.Name = "Clyde";
+            this.Clyde.Size = new System.Drawing.Size(19, 19);
+            this.Clyde.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Clyde.TabIndex = 148;
+            this.Clyde.TabStop = false;
             // 
             // Form1
             // 
@@ -1677,7 +1677,7 @@ namespace PacMan
             this.BackgroundImage = global::PacMan.Properties.Resources.pacMan_back1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(817, 627);
-            this.Controls.Add(this.pictureBox132);
+            this.Controls.Add(this.Clyde);
             this.Controls.Add(this.Lives3);
             this.Controls.Add(this.Lives2);
             this.Controls.Add(this.Lives1);
@@ -1971,7 +1971,7 @@ namespace PacMan
             ((System.ComponentModel.ISupportInitialize)(this.Lives1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lives2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lives3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox132)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Clyde)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2125,7 +2125,7 @@ namespace PacMan
         private System.Windows.Forms.PictureBox Lives1;
         private System.Windows.Forms.PictureBox Lives2;
         private System.Windows.Forms.PictureBox Lives3;
-        private System.Windows.Forms.PictureBox pictureBox132;
+        private System.Windows.Forms.PictureBox Clyde;
     }
 }
 

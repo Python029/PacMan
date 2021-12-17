@@ -20,6 +20,7 @@ namespace PacMan
         Form3 f3 = new Form3();
         Random rnd = new Random();
         int pink = 0;
+        int orange = 0;
         int p = 0;
         int Speed = 3;
         int pSpeed = 3;
@@ -442,8 +443,33 @@ namespace PacMan
             #endregion
             if (pStart == true && pChange == false)
             {
+                orange = rnd.Next(1, 5);
+                if (orange ==1) { Clyde.Top -= pSpeed; pChange = true; }
+                else if (orange == 2) { Clyde.Top += pSpeed; pChange = true; }
+                else if (orange == 3) { Clyde.Left -= pSpeed; pChange = true; }
+                else if (orange == 4) { Clyde.Left += pSpeed; pChange = true; }
+            }
+        }
+        private void OrangeGhost()
+        {
+            #region AI
+
+            if (pStart == true)
+            {
+                if (oStart == false)
+                {
+                    Pinky.Top -= pSpeed;
+                    if (Pinky.Location.Y <= 252)
+                    {
+                        pStart = true;
+                    }
+                }
+            }
+            #endregion
+            if (pStart == true && pChange == false)
+            {
                 pink = rnd.Next(1, 5);
-                if (pink ==1) { Pinky.Top -= pSpeed; pChange = true; }
+                if (pink == 1) { Pinky.Top -= pSpeed; pChange = true; }
                 else if (pink == 2) { Pinky.Top += pSpeed; pChange = true; }
                 else if (pink == 3) { Pinky.Left -= pSpeed; pChange = true; }
                 else if (pink == 4) { Pinky.Left += pSpeed; pChange = true; }
