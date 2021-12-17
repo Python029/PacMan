@@ -168,18 +168,6 @@
     <None Include="Resources\CatDerik.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Odown.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Oleft.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Oright.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Oup.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bananos.png" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +181,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RedRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Odown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oup.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

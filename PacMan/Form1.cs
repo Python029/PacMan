@@ -379,28 +379,18 @@ namespace PacMan
                 #region Red Ghost
                 for (int i = 0; i < walls.Length; i++)
                 {
-                    if (Blinky.Bounds.IntersectsWith(walls[i].Bounds))
+                    if (Blinky.Bounds.IntersectsWith(walls[i].Bounds) && rStart == true)
                     {
+                        red = rnd.Next(1, 5);
                         Blinky.Location = new Point(rx, ry);
-                        if (ru == true || rd == true)
-                        {
-                            if (rl) { Blinky.Left -= rSpeed; }
-                            else if (rr) { Blinky.Left += rSpeed; }
-                            ru = false; rd = false;
-                            rChange = false;
-                        }
-                        if (rl == true || rr == true)
-                        {
-                            if (ru) { Blinky.Left -= rSpeed; }
-                            else if (rd) { Blinky.Left += rSpeed; }
-                            rl = false; rr = false;
-                            rChange = false;
-                        }
+                        rChange = false;
                     }
                 }
                 if (Blinky.Bounds.IntersectsWith(GhostWall.Bounds) && rStart == true)
                 {
                     Blinky.Location = new Point(px, py);
+                    red = rnd.Next(3, 5);
+                    rChange = false;
                 }
                 if (Blinky.Bounds.IntersectsWith(Corridor1.Bounds) || Blinky.Bounds.IntersectsWith(Corridor2.Bounds))
                 {
@@ -487,7 +477,6 @@ namespace PacMan
         }
         private void OrangeGhost()
         {
-            #region AI
 
             if (pStart == true)
             {
@@ -501,7 +490,6 @@ namespace PacMan
                     }
                 }
             }
-            #endregion
             if (oStart == true && oChange == false)
             {
                 if (orange == 1) { Clyde.Top -= oSpeed; Clyde.Image = Properties.Resources.Oup; }
@@ -518,37 +506,16 @@ namespace PacMan
                 if(Blinky.Location.Y <= 252)
                 {
                     rStart = true;
+                    red = rnd.Next(1, 5);
                 }
             }
-            else if (rStart == true&&rChange==false)
+            if (rStart == true&&rChange==false)
             {
-                #region AI
-                if (Player.Location.Y < Blinky.Location.Y)
-                {
-                    ru = true;
-                    rd = false;
-                }
-                else if (Player.Location.Y > Blinky.Location.Y)
-                {
-                    ru = false;
-                    rd = true;
-                }
-                if (Player.Location.X < Blinky.Location.X)
-                {
-                    rl = true;
-                    rr = false;
-                }
-                else if (Player.Location.X > Blinky.Location.X)
-                {
-                    rl = false;
-                    rr = true;                    
-                }
-                #endregion
                 #region Booleans
-                    if (ru) { Blinky.Top -= rSpeed; rChange = true; }
-                    else if (rd) { Blinky.Top += rSpeed; rChange = true; }
-                    if (rl) { Blinky.Left -= rSpeed; rChange = true; }
-                    else if (rr) { Blinky.Left += rSpeed; rChange = true; }               
+                if (red == 1) { Blinky.Top -= rSpeed; Blinky.Image = Properties.Resources.RedUp; }
+                else if (red == 2) { Blinky.Top += rSpeed; Blinky.Image = Properties.Resources.RedDown; }
+                else if (red == 3) { Blinky.Left -= rSpeed; Blinky.Image = Properties.Resources.RedLeft; }
+                else if (red == 4) { Blinky.Left += rSpeed; Blinky.Image = Properties.Resources.RedRight; }
                 #endregion
             }
         }
