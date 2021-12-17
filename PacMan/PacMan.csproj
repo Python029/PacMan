@@ -129,22 +129,10 @@
     <None Include="Resources\PinkDown.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PinkLeft.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PinkRight.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\PinkUp.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RedDown.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\RedLeft.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\RedRight.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RedUp.png" />
@@ -193,6 +181,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bananos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedRight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

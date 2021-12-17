@@ -22,6 +22,8 @@ namespace PacMan
         Random rnd = new Random();
         int pink = 0;
         int orange = 0;
+        int red = 0;
+        int blue = 0;
         int p = 0;
         int Speed = 3;
         int pSpeed = 3;
@@ -329,6 +331,7 @@ namespace PacMan
                 {
                     if (Pinky.Bounds.IntersectsWith(walls[i].Bounds) && pStart == true)
                     {
+                        pink = rnd.Next(1, 5);
                         Pinky.Location = new Point(px, py);
                         pChange = false;
                     }
@@ -336,6 +339,7 @@ namespace PacMan
                 if (Pinky.Bounds.IntersectsWith(GhostWall.Bounds) && pStart==true)
                 {
                     Pinky.Location = new Point(px, py);
+                    pink = rnd.Next(3, 5);
                     pChange=false;
                 }
                 if (Pinky.Bounds.IntersectsWith(Corridor1.Bounds) || Pinky.Bounds.IntersectsWith(Corridor2.Bounds))
@@ -352,6 +356,7 @@ namespace PacMan
                 {
                     if (Clyde.Bounds.IntersectsWith(walls[i].Bounds) && oStart == true)
                     {
+                        orange = rnd.Next(1, 5);
                         Clyde.Location = new Point(ox, oy);
                         oChange = false;
                     }
@@ -359,6 +364,7 @@ namespace PacMan
                 if (Clyde.Bounds.IntersectsWith(GhostWall.Bounds) && oStart == true)
                 {
                     Clyde.Location = new Point(ox, oy);
+                    orange = rnd.Next(3, 5);
                     oChange = false;
                 }
                 if (Clyde.Bounds.IntersectsWith(Corridor1.Bounds) || Clyde.Bounds.IntersectsWith(Corridor2.Bounds))
@@ -466,17 +472,17 @@ namespace PacMan
                     if (Pinky.Location.Y <= 252)
                     {
                         pStart = true;
+                        pink = rnd.Next(1, 5);
                     }
                 }
             }
             #endregion
-            if (pStart == true && pChange == false)
-            {
-                pink = rnd.Next(1, 5);
-                if (pink ==1) { Pinky.Top -= pSpeed; pChange = true; }
-                else if (pink == 2) { Pinky.Top += pSpeed; pChange = true; }
-                else if (pink == 3) { Pinky.Left -= pSpeed; pChange = true; }
-                else if (pink == 4) { Pinky.Left += pSpeed; pChange = true; }
+            if (pStart == true)
+            {              
+                if (pink == 1) { Pinky.Top -= pSpeed; Pinky.Image = Properties.Resources.PinkUp; }
+                else if (pink == 2) { Pinky.Top += pSpeed; Pinky.Image = Properties.Resources.PinkDown; }
+                else if (pink == 3) { Pinky.Left -= pSpeed; Pinky.Image = Properties.Resources.PinkLeft; }
+                else if (pink == 4) { Pinky.Left += pSpeed; Pinky.Image = Properties.Resources.PinkRight; }
             }
         }
         private void OrangeGhost()
@@ -491,17 +497,17 @@ namespace PacMan
                     if (Clyde.Location.Y <= 252)
                     {
                         oStart = true;
+                        orange = rnd.Next(1, 5);
                     }
                 }
             }
             #endregion
             if (oStart == true && oChange == false)
             {
-                orange = rnd.Next(1, 5);
-                if (orange == 1) { Clyde.Top -= oSpeed; oChange = true; }
-                else if (orange == 2) { Clyde.Top += oSpeed; oChange = true; }
-                else if (orange == 3) { Clyde.Left -= oSpeed; oChange = true; }
-                else if (orange == 4) { Clyde.Left += oSpeed; oChange = true; }
+                if (orange == 1) { Clyde.Top -= oSpeed; Clyde.Image = Properties.Resources.Oup; }
+                else if (orange == 2) { Clyde.Top += oSpeed; Clyde.Image = Properties.Resources.Odown; }
+                else if (orange == 3) { Clyde.Left -= oSpeed; Clyde.Image = Properties.Resources.Oleft; }
+                else if (orange == 4) { Clyde.Left += oSpeed; Clyde.Image = Properties.Resources.Oright; }
             }
         }
         private void RedGhost()
