@@ -18,6 +18,8 @@ namespace PacMan
         }
         Highscore f2 = new Highscore();
         Form3 f3 = new Form3();
+        Random rnd = new Random();
+        int pink = 0;
         int p = 0;
         int Speed = 3;
         int pSpeed = 3;
@@ -67,6 +69,7 @@ namespace PacMan
                 MoveAndAnimate.Enabled = true;
                 Properties.Settings.Default.Start = false;               
             }
+            Pinky.Location = new Point(402, 302);
         }
         private void LoadPellets()
         {
@@ -320,11 +323,13 @@ namespace PacMan
                     if (Pinky.Bounds.IntersectsWith(walls[i].Bounds) && pStart == true)
                     {
                         Pinky.Location = new Point(px, py);
+                        pChange = false;
                     }
                 }
                 if (Pinky.Bounds.IntersectsWith(GhostWall.Bounds) && pStart==true)
                 {
                     Pinky.Location = new Point(px, py);
+                    pChange=false;
                 }
                 if (Pinky.Bounds.IntersectsWith(Corridor1.Bounds) || Pinky.Bounds.IntersectsWith(Corridor2.Bounds))
                 {
@@ -422,7 +427,7 @@ namespace PacMan
         private void PinkGhost()
         {
             #region AI
-            Pinky.Location = new Point(402, 302);
+            
             if (rStart == true)
             {
                 if (pStart == false)
@@ -435,13 +440,13 @@ namespace PacMan
                 }
             }
             #endregion
-            if (pStart == true)
+            if (pStart == true && pChange == false)
             {
-
-                if (pu) { Pinky.Top -= pSpeed; }
-                else if (pd) { Pinky.Top += pSpeed; }
-                if (pl) { Pinky.Left -= pSpeed; }
-                else if (pr) { Pinky.Left += pSpeed; }
+                pink = rnd.Next(1, 5);
+                if (pink ==1) { Pinky.Top -= pSpeed; pChange = true; }
+                else if (pink == 2) { Pinky.Top += pSpeed; pChange = true; }
+                else if (pink == 3) { Pinky.Left -= pSpeed; pChange = true; }
+                else if (pink == 4) { Pinky.Left += pSpeed; pChange = true; }
             }
         }
         private void RedGhost()
