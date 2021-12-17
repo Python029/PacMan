@@ -18,6 +18,7 @@ namespace PacMan
         }
         Highscore f2 = new Highscore();
         Form3 f3 = new Form3();
+        Form4 f4 = new Form4();
         Random rnd = new Random();
         int pink = 0;
         int orange = 0;
@@ -609,6 +610,11 @@ namespace PacMan
         private void pictureBox48_Click(object sender, EventArgs e)
         {
             f3.ShowDialog();
+        }
+
+        private void pictureBox47_Click(object sender, EventArgs e)
+        {
+            f4.ShowDialog();
         }
     }
 }

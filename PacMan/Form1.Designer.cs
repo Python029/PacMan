@@ -767,6 +767,7 @@ namespace PacMan
             this.pictureBox47.Size = new System.Drawing.Size(47, 43);
             this.pictureBox47.TabIndex = 50;
             this.pictureBox47.TabStop = false;
+            this.pictureBox47.Click += new System.EventHandler(this.pictureBox47_Click);
             // 
             // pictureBox48
             // 
