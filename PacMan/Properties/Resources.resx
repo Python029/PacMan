@@ -121,8 +121,11 @@
   <data name="PinkRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PinkRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RedLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RedLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Odown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Odown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pacMan back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pacMan back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +148,20 @@
   <data name="PacMan3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacMan3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CatDerik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CatDerik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RedUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RedUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PacManU1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PacManU1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PacManD2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacManD2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PacManU1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PacManU1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RedLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PacManR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacManR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +169,17 @@
   <data name="RedRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RedRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Oleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PacManL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacMan2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PacManR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacManR2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oright" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RedDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RedDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,19 +190,7 @@
   <data name="PinkDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PinkDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CatDerik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CatDerik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Odown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Odown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Oleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Oleft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Oright" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Oright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Oup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Oup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bananos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bananos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

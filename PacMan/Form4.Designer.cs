@@ -1,4 +1,5 @@
-﻿namespace PacMan
+﻿
+namespace PacMan
 {
     partial class Form4
     {
@@ -28,10 +29,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Form4
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::PacMan.Properties.Resources.bananos;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(695, 751);
+            this.DoubleBuffered = true;
+            this.Name = "Form4";
             this.Text = "Form4";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
