@@ -823,7 +823,7 @@ namespace PacMan
             this.Blinky.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Blinky.BackgroundImage")));
             this.Blinky.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Blinky.Image = global::PacMan.Properties.Resources.RedUp;
-            this.Blinky.Location = new System.Drawing.Point(402, 252);
+            this.Blinky.Location = new System.Drawing.Point(402, 302);
             this.Blinky.Name = "Blinky";
             this.Blinky.Size = new System.Drawing.Size(19, 19);
             this.Blinky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
