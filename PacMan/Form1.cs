@@ -33,8 +33,11 @@ namespace PacMan
         int bSpeed = 3;
         int gSpeed = 3;
         bool pellet = false;
+        int gScore = 0;
+        bool big = false;
         int score;
         int life;
+        int x = 0;
         bool u = false; bool d = false; bool l = false; bool r = false;
         bool pStart = false; bool rStart = false; bool bStart = false; bool oStart = false; bool gStart = false;
         int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0; int ox = 0; int oy = 0; int bx = 0; int by=0; int gx = 0; int gy = 0;
@@ -114,6 +117,7 @@ namespace PacMan
                     score += 50;
                     Bpellets[i].Dispose();
                     Bpellets.RemoveAt(i);
+                    big = true;
                 }
             }
             #region Show Score
@@ -320,7 +324,7 @@ namespace PacMan
                 //Lives
                 for(int i=0;i<ghosts.Length; i++)
                 {
-                    if(Player.Bounds.IntersectsWith(ghosts[i].Bounds))
+                    if (Player.Bounds.IntersectsWith(ghosts[i].Bounds) && big == false)
                     {
                         if(life ==0)
                         {
@@ -331,6 +335,160 @@ namespace PacMan
                             life -= 1;
                             Player.Location = new Point(402, 349);
                         }
+                    }
+                    else if(Player.Bounds.IntersectsWith(ghosts[i].Bounds) && big == true && x<=10000)
+                    {
+                        gScore++;
+                        ghosts[i].Location = new Point(402, 252);
+                        #region Ghost Reset
+                        if (gScore ==1)
+                        {
+                            score += 200;                                                   
+                            if (i==1)
+                            {
+                                Pinky.Image = Properties.Resources.PinkUp;
+                                pink = 1;
+                            }
+                            else if (i == 2)
+                            {
+                                Blinky.Image = Properties.Resources.RedUp;
+                                red = 1;
+                            }
+                            else if (i == 3)
+                            {
+                                Clyde.Image = Properties.Resources.PinkUp;
+                                orange = 1;
+                            }
+                            else if (i == 4)
+                            {
+                                Inky.Image = Properties.Resources.BlueUp;
+                                blue = 1;
+                            }
+                            else if (i == 5)
+                            {
+                                Slimy.Image = Properties.Resources.GreenUp;
+                                green = 1;
+                            }
+                        }
+                        else if (gScore == 2)
+                        {
+                            score += 400;
+                            if (i == 1)
+                            {
+                                Pinky.Image = Properties.Resources.PinkUp;
+                                pink = 1;
+                            }
+                            else if (i == 2)
+                            {
+                                Blinky.Image = Properties.Resources.RedUp;
+                                red = 1;
+                            }
+                            else if (i == 3)
+                            {
+                                Clyde.Image = Properties.Resources.PinkUp;
+                                orange = 1;
+                            }
+                            else if (i == 4)
+                            {
+                                Inky.Image = Properties.Resources.BlueUp;
+                                blue = 1;
+                            }
+                            else if (i == 5)
+                            {
+                                Slimy.Image = Properties.Resources.GreenUp;
+                                green = 1;
+                            }
+                        }
+                        else if (gScore == 3)
+                        {
+                            score += 800;
+                            if (i == 1)
+                            {
+                                Pinky.Image = Properties.Resources.PinkUp;
+                                pink = 1;
+                            }
+                            else if (i == 2)
+                            {
+                                Blinky.Image = Properties.Resources.RedUp;
+                                red = 1;
+                            }
+                            else if (i == 3)
+                            {
+                                Clyde.Image = Properties.Resources.PinkUp;
+                                orange = 1;
+                            }
+                            else if (i == 4)
+                            {
+                                Inky.Image = Properties.Resources.BlueUp;
+                                blue = 1;
+                            }
+                            else if (i == 5)
+                            {
+                                Slimy.Image = Properties.Resources.GreenUp;
+                                green = 1;
+                            }
+                        }
+                        else if (gScore == 4)
+                        {
+                            score += 1600;
+                            if (i == 1)
+                            {
+                                Pinky.Image = Properties.Resources.PinkUp;
+                                pink = 1;
+                            }
+                            else if (i == 2)
+                            {
+                                Blinky.Image = Properties.Resources.RedUp;
+                                red = 1;
+                            }
+                            else if (i == 3)
+                            {
+                                Clyde.Image = Properties.Resources.PinkUp;
+                                orange = 1;
+                            }
+                            else if (i == 4)
+                            {
+                                Inky.Image = Properties.Resources.BlueUp;
+                                blue = 1;
+                            }
+                            else if (i == 5)
+                            {
+                                Slimy.Image = Properties.Resources.GreenUp;
+                                green = 1;
+                            }
+                        }
+                        else if (gScore == 5)
+                        {
+                            score += 3200;
+                            big = false;
+                            if (i == 1)
+                            {
+                                Pinky.Image = Properties.Resources.PinkUp;
+                                pink = 1;
+                            }
+                            else if (i == 2)
+                            {
+                                Blinky.Image = Properties.Resources.RedUp;
+                                red = 1;
+                            }
+                            else if (i == 3)
+                            {
+                                Clyde.Image = Properties.Resources.PinkUp;
+                                orange = 1;
+                            }
+                            else if (i == 4)
+                            {
+                                Inky.Image = Properties.Resources.BlueUp;
+                                blue = 1;
+                            }
+                            else if (i == 5)
+                            {
+                                Slimy.Image = Properties.Resources.GreenUp;
+                                green = 1;
+                            }
+                        }
+                        #endregion
+
                     }
                 }
                 #endregion
@@ -512,11 +670,21 @@ namespace PacMan
                 }
             }
             if (pStart == true)
-            {              
-                if (pink == 1) { Pinky.Top -= pSpeed; Pinky.Image = Properties.Resources.PinkUp; }
-                else if (pink == 2) { Pinky.Top += pSpeed; Pinky.Image = Properties.Resources.PinkDown; }
-                else if (pink == 3) { Pinky.Left -= pSpeed; Pinky.Image = Properties.Resources.PinkLeft; }
-                else if (pink == 4) { Pinky.Left += pSpeed; Pinky.Image = Properties.Resources.PinkRight; }
+            {
+                if (big == false)
+                {
+                    if (pink == 1) { Pinky.Top -= pSpeed; Pinky.Image = Properties.Resources.PinkUp; }
+                    else if (pink == 2) { Pinky.Top += pSpeed; Pinky.Image = Properties.Resources.PinkDown; }
+                    else if (pink == 3) { Pinky.Left -= pSpeed; Pinky.Image = Properties.Resources.PinkLeft; }
+                    else if (pink == 4) { Pinky.Left += pSpeed; Pinky.Image = Properties.Resources.PinkRight; }
+                }
+                else if (big)
+                {
+                    if (pink == 1) { Pinky.Top -= pSpeed; Pinky.Image = Properties.Resources.BigUp; }
+                    else if (pink == 2) { Pinky.Top += pSpeed; Pinky.Image = Properties.Resources.BigDown; }
+                    else if (pink == 3) { Pinky.Left -= pSpeed; Pinky.Image = Properties.Resources.BigLeft; }
+                    else if (pink == 4) { Pinky.Left += pSpeed; Pinky.Image = Properties.Resources.BigRight; }
+                }
             }
         }
         private void GreenGhost()
@@ -535,10 +703,20 @@ namespace PacMan
             }
             if (pStart == true)
             {
-                if (green == 1) { Slimy.Top -= gSpeed; Slimy.Image = Properties.Resources.GreenUp; }
-                else if (green == 2) { Slimy.Top += gSpeed; Slimy.Image = Properties.Resources.GreenDown; }
-                else if (green == 3) { Slimy.Left -= gSpeed; Slimy.Image = Properties.Resources.GreenLeft; }
-                else if (green == 4) { Slimy.Left += gSpeed; Slimy.Image = Properties.Resources.GreenRight; }
+                if (big == false)
+                {
+                    if (green == 1) { Slimy.Top -= gSpeed; Slimy.Image = Properties.Resources.GreenUp; }
+                    else if (green == 2) { Slimy.Top += gSpeed; Slimy.Image = Properties.Resources.GreenDown; }
+                    else if (green == 3) { Slimy.Left -= gSpeed; Slimy.Image = Properties.Resources.GreenLeft; }
+                    else if (green == 4) { Slimy.Left += gSpeed; Slimy.Image = Properties.Resources.GreenRight; }
+                }
+                else if(big)
+                {
+                    if (green == 1) { Slimy.Top -= gSpeed; Slimy.Image = Properties.Resources.BigUp; }
+                    else if (green == 2) { Slimy.Top += gSpeed; Slimy.Image = Properties.Resources.BigDown; }
+                    else if (green == 3) { Slimy.Left -= gSpeed; Slimy.Image = Properties.Resources.BigLeft; }
+                    else if (green == 4) { Slimy.Left += gSpeed; Slimy.Image = Properties.Resources.BigRight; }
+                }
             }
         }
         private void BlueGhost()
@@ -557,10 +735,20 @@ namespace PacMan
             }
             if (bStart == true)
             {
-                if (blue == 1) { Inky.Top -= bSpeed; Inky.Image = Properties.Resources.BlueUp; }
-                else if (blue == 2) { Inky.Top += bSpeed; Inky.Image = Properties.Resources.BlueDown; }
-                else if (blue == 3) { Inky.Left -= bSpeed; Inky.Image = Properties.Resources.BlueLeft; }
-                else if (blue == 4) { Inky.Left += bSpeed; Inky.Image = Properties.Resources.BlueRight; }
+                if (big == false)
+                {
+                    if (blue == 1) { Inky.Top -= bSpeed; Inky.Image = Properties.Resources.BlueUp; }
+                    else if (blue == 2) { Inky.Top += bSpeed; Inky.Image = Properties.Resources.BlueDown; }
+                    else if (blue == 3) { Inky.Left -= bSpeed; Inky.Image = Properties.Resources.BlueLeft; }
+                    else if (blue == 4) { Inky.Left += bSpeed; Inky.Image = Properties.Resources.BlueRight; }
+                }
+                else if(big)
+                {
+                    if (blue == 1) { Inky.Top -= bSpeed; Inky.Image = Properties.Resources.BigUp; }
+                    else if (blue == 2) { Inky.Top += bSpeed; Inky.Image = Properties.Resources.BigDown; }
+                    else if (blue == 3) { Inky.Left -= bSpeed; Inky.Image = Properties.Resources.BigLeft; }
+                    else if (blue == 4) { Inky.Left += bSpeed; Inky.Image = Properties.Resources.BigRight; }
+                }
             }
         }
         private void OrangeGhost()
@@ -580,10 +768,20 @@ namespace PacMan
             }
             if (oStart == true)
             {
-                if (orange == 1) { Clyde.Top -= oSpeed; Clyde.Image = Properties.Resources.Oup; }
-                else if (orange == 2) { Clyde.Top += oSpeed; Clyde.Image = Properties.Resources.Odown; }
-                else if (orange == 3) { Clyde.Left -= oSpeed; Clyde.Image = Properties.Resources.Oleft; }
-                else if (orange == 4) { Clyde.Left += oSpeed; Clyde.Image = Properties.Resources.Oright; }
+                if (big == false)
+                {
+                    if (orange == 1) { Clyde.Top -= oSpeed; Clyde.Image = Properties.Resources.Oup; }
+                    else if (orange == 2) { Clyde.Top += oSpeed; Clyde.Image = Properties.Resources.Odown; }
+                    else if (orange == 3) { Clyde.Left -= oSpeed; Clyde.Image = Properties.Resources.Oleft; }
+                    else if (orange == 4) { Clyde.Left += oSpeed; Clyde.Image = Properties.Resources.Oright; }
+                }
+                else if(big)
+                {
+                    if (orange == 1) { Clyde.Top -= oSpeed; Clyde.Image = Properties.Resources.BigUp; }
+                    else if (orange == 2) { Clyde.Top += oSpeed; Clyde.Image = Properties.Resources.BigDown; }
+                    else if (orange == 3) { Clyde.Left -= oSpeed; Clyde.Image = Properties.Resources.BigLeft; }
+                    else if (orange == 4) { Clyde.Left += oSpeed; Clyde.Image = Properties.Resources.BigRight; }
+                }
             }
         }
         private void RedGhost()
@@ -599,12 +797,21 @@ namespace PacMan
             }
             if (rStart == true)
             {
-                #region Booleans
-                if (red == 1) { Blinky.Top -= rSpeed; Blinky.Image = Properties.Resources.RedUp; }
-                else if (red == 2) { Blinky.Top += rSpeed; Blinky.Image = Properties.Resources.RedDown; }
-                else if (red == 3) { Blinky.Left -= rSpeed; Blinky.Image = Properties.Resources.RedLeft; }
-                else if (red == 4) { Blinky.Left += rSpeed; Blinky.Image = Properties.Resources.RedRight; }
-                #endregion
+                if (big == false)
+                {
+                    if (red == 1) { Blinky.Top -= rSpeed; Blinky.Image = Properties.Resources.RedUp; }
+                    else if (red == 2) { Blinky.Top += rSpeed; Blinky.Image = Properties.Resources.RedDown; }
+                    else if (red == 3) { Blinky.Left -= rSpeed; Blinky.Image = Properties.Resources.RedLeft; }
+                    else if (red == 4) { Blinky.Left += rSpeed; Blinky.Image = Properties.Resources.RedRight; }
+                }
+                else if(big)
+                {
+                    if (red == 1) { Blinky.Top -= rSpeed; Blinky.Image = Properties.Resources.BigUp; }
+                    else if (red == 2) { Blinky.Top += rSpeed; Blinky.Image = Properties.Resources.BigDown; }
+                    else if (red == 3) { Blinky.Left -= rSpeed; Blinky.Image = Properties.Resources.BigLeft; }
+                    else if (red == 4) { Blinky.Left += rSpeed; Blinky.Image = Properties.Resources.BigRight; }
+                }
+
             }
         }
         private void Start()
@@ -676,6 +883,13 @@ namespace PacMan
         private void pictureBox47_Click(object sender, EventArgs e)
         {
             f4.ShowDialog();
+        }
+
+        private void Big_Pellet_Tick(object sender, EventArgs e)
+        {
+            x++;
+            if(x>= 10000)
+            { big=false; }
         }
     }
 }

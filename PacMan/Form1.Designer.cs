@@ -180,6 +180,7 @@ namespace PacMan
             this.Clyde = new System.Windows.Forms.PictureBox();
             this.Inky = new System.Windows.Forms.PictureBox();
             this.Slimy = new System.Windows.Forms.PictureBox();
+            this.Big_Pellet = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -1700,6 +1701,12 @@ namespace PacMan
             this.Slimy.TabIndex = 150;
             this.Slimy.TabStop = false;
             // 
+            // Big_Pellet
+            // 
+            this.Big_Pellet.Enabled = true;
+            this.Big_Pellet.Interval = 500;
+            this.Big_Pellet.Tick += new System.EventHandler(this.Big_Pellet_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2163,6 +2170,7 @@ namespace PacMan
         private System.Windows.Forms.PictureBox Clyde;
         private System.Windows.Forms.PictureBox Inky;
         private System.Windows.Forms.PictureBox Slimy;
+        private System.Windows.Forms.Timer Big_Pellet;
     }
 }
 

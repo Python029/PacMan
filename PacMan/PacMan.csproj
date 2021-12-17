@@ -227,5 +227,17 @@
   <ItemGroup>
     <None Include="Resources\GreenUp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BigRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BigUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BigLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BigDown.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
