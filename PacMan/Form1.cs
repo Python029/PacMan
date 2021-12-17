@@ -36,7 +36,7 @@ namespace PacMan
         bool ou = false; bool od = false; bool ol = false; bool or = false;
         bool pStart = false; bool rStart = false; bool bStart = false; bool oStart = false;
         bool pChange = false; bool rChange = false; bool oChange = false; bool bChange = false;
-        int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0;
+        int plx = 0; int ply = 0; int px = 0; int py = 0; int rx = 0; int ry = 0; int ox = 0; int oy = 0;
         PictureBox[] walls;
         PictureBox[] ghosts;
         List<PictureBox> pellets = new List<PictureBox>();
@@ -165,6 +165,8 @@ namespace PacMan
             py = Pinky.Location.Y;
             rx = Blinky.Location.X;
             ry = Blinky.Location.Y;
+            ox = Clyde.Location.X;
+            oy = Clyde.Location.Y;
             #region Animation
             if (u)
             {
@@ -349,13 +351,13 @@ namespace PacMan
                 {
                     if (Clyde.Bounds.IntersectsWith(walls[i].Bounds) && oStart == true)
                     {
-                        Clyde.Location = new Point(px, py);
+                        Clyde.Location = new Point(ox, oy);
                         oChange = false;
                     }
                 }
                 if (Clyde.Bounds.IntersectsWith(GhostWall.Bounds) && oStart == true)
                 {
-                    Clyde.Location = new Point(px, py);
+                    Clyde.Location = new Point(ox, oy);
                     oChange = false;
                 }
                 if (Clyde.Bounds.IntersectsWith(Corridor1.Bounds) || Clyde.Bounds.IntersectsWith(Corridor2.Bounds))
@@ -469,11 +471,11 @@ namespace PacMan
             #endregion
             if (pStart == true && pChange == false)
             {
-                orange = rnd.Next(1, 5);
-                if (orange ==1) { Clyde.Top -= pSpeed; pChange = true; }
-                else if (orange == 2) { Clyde.Top += pSpeed; pChange = true; }
-                else if (orange == 3) { Clyde.Left -= pSpeed; pChange = true; }
-                else if (orange == 4) { Clyde.Left += pSpeed; pChange = true; }
+                pink = rnd.Next(1, 5);
+                if (pink ==1) { Pinky.Top -= pSpeed; pChange = true; }
+                else if (pink == 2) { Pinky.Top += pSpeed; pChange = true; }
+                else if (pink == 3) { Pinky.Left -= pSpeed; pChange = true; }
+                else if (pink == 4) { Pinky.Left += pSpeed; pChange = true; }
             }
         }
         private void OrangeGhost()
@@ -484,7 +486,7 @@ namespace PacMan
             {
                 if (oStart == false)
                 {
-                    Clyde.Top -= pSpeed;
+                    Clyde.Top -= oSpeed;
                     if (Clyde.Location.Y <= 252)
                     {
                         oStart = true;
@@ -495,10 +497,10 @@ namespace PacMan
             if (oStart == true && oChange == false)
             {
                 orange = rnd.Next(1, 5);
-                if (orange == 1) { Clyde.Top -= oSpeed; pChange = true; }
-                else if (orange == 2) { Clyde.Top += oSpeed; pChange = true; }
-                else if (orange == 3) { Clyde.Left -= oSpeed; pChange = true; }
-                else if (orange == 4) { Clyde.Left += oSpeed; pChange = true; }
+                if (orange == 1) { Clyde.Top -= oSpeed; oChange = true; }
+                else if (orange == 2) { Clyde.Top += oSpeed; oChange = true; }
+                else if (orange == 3) { Clyde.Left -= oSpeed; oChange = true; }
+                else if (orange == 4) { Clyde.Left += oSpeed; oChange = true; }
             }
         }
         private void RedGhost()
