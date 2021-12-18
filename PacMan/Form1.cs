@@ -340,152 +340,57 @@ namespace PacMan
                     {
                         gScore++;
                         ghosts[i].Location = new Point(402, 252);
+                        if (i == 1)
+                        {
+                            Pinky.Location = new Point(402, 252);
+                            Pinky.Image = Properties.Resources.PinkUp;                           
+                            pink = 1;
+                        }
+                        else if (i == 2)
+                        {
+                            Blinky.Location = new Point(402, 252);
+                            Blinky.Image = Properties.Resources.RedUp;
+                            red = 1;                           
+                        }
+                        else if (i == 3)
+                        {
+                            Clyde.Location = new Point(402, 252);
+                            Clyde.Image = Properties.Resources.Oup;
+                            orange = 1;
+                        }
+                        else if (i == 4)
+                        {
+                            Inky.Location = new Point(402, 252);
+                            Inky.Image = Properties.Resources.BlueUp;
+                            blue = 1;
+                        }
+                        else if (i == 5)
+                        {
+                            Slimy.Location = new Point(402, 252);
+                            Slimy.Image = Properties.Resources.GreenUp;
+                            green = 1;
+                        }
                         #region Ghost Reset
                         if (gScore ==1)
                         {
-                            score += 200;                                                   
-                            if (i==1)
-                            {
-                                Pinky.Image = Properties.Resources.PinkUp;
-                                pink = 1;
-                            }
-                            else if (i == 2)
-                            {
-                                Blinky.Image = Properties.Resources.RedUp;
-                                red = 1;
-                            }
-                            else if (i == 3)
-                            {
-                                Clyde.Image = Properties.Resources.PinkUp;
-                                orange = 1;
-                            }
-                            else if (i == 4)
-                            {
-                                Inky.Image = Properties.Resources.BlueUp;
-                                blue = 1;
-                            }
-                            else if (i == 5)
-                            {
-                                Slimy.Image = Properties.Resources.GreenUp;
-                                green = 1;
-                            }
+                            score += 200;                                                                               
                         }
                         else if (gScore == 2)
                         {
                             score += 400;
-                            if (i == 1)
-                            {
-                                Pinky.Image = Properties.Resources.PinkUp;
-                                pink = 1;
-                            }
-                            else if (i == 2)
-                            {
-                                Blinky.Image = Properties.Resources.RedUp;
-                                red = 1;
-                            }
-                            else if (i == 3)
-                            {
-                                Clyde.Image = Properties.Resources.PinkUp;
-                                orange = 1;
-                            }
-                            else if (i == 4)
-                            {
-                                Inky.Image = Properties.Resources.BlueUp;
-                                blue = 1;
-                            }
-                            else if (i == 5)
-                            {
-                                Slimy.Image = Properties.Resources.GreenUp;
-                                green = 1;
-                            }
                         }
                         else if (gScore == 3)
                         {
                             score += 800;
-                            if (i == 1)
-                            {
-                                Pinky.Image = Properties.Resources.PinkUp;
-                                pink = 1;
-                            }
-                            else if (i == 2)
-                            {
-                                Blinky.Image = Properties.Resources.RedUp;
-                                red = 1;
-                            }
-                            else if (i == 3)
-                            {
-                                Clyde.Image = Properties.Resources.PinkUp;
-                                orange = 1;
-                            }
-                            else if (i == 4)
-                            {
-                                Inky.Image = Properties.Resources.BlueUp;
-                                blue = 1;
-                            }
-                            else if (i == 5)
-                            {
-                                Slimy.Image = Properties.Resources.GreenUp;
-                                green = 1;
-                            }
                         }
                         else if (gScore == 4)
                         {
                             score += 1600;
-                            if (i == 1)
-                            {
-                                Pinky.Image = Properties.Resources.PinkUp;
-                                pink = 1;
-                            }
-                            else if (i == 2)
-                            {
-                                Blinky.Image = Properties.Resources.RedUp;
-                                red = 1;
-                            }
-                            else if (i == 3)
-                            {
-                                Clyde.Image = Properties.Resources.PinkUp;
-                                orange = 1;
-                            }
-                            else if (i == 4)
-                            {
-                                Inky.Image = Properties.Resources.BlueUp;
-                                blue = 1;
-                            }
-                            else if (i == 5)
-                            {
-                                Slimy.Image = Properties.Resources.GreenUp;
-                                green = 1;
-                            }
                         }
                         else if (gScore == 5)
                         {
                             score += 3200;
                             big = false;
-                            if (i == 1)
-                            {
-                                Pinky.Image = Properties.Resources.PinkUp;
-                                pink = 1;
-                            }
-                            else if (i == 2)
-                            {
-                                Blinky.Image = Properties.Resources.RedUp;
-                                red = 1;
-                            }
-                            else if (i == 3)
-                            {
-                                Clyde.Image = Properties.Resources.PinkUp;
-                                orange = 1;
-                            }
-                            else if (i == 4)
-                            {
-                                Inky.Image = Properties.Resources.BlueUp;
-                                blue = 1;
-                            }
-                            else if (i == 5)
-                            {
-                                Slimy.Image = Properties.Resources.GreenUp;
-                                green = 1;
-                            }
                         }
                         #endregion
 
@@ -888,7 +793,7 @@ namespace PacMan
         private void Big_Pellet_Tick(object sender, EventArgs e)
         {
             x++;
-            if(x>= 10000)
+            if(x>= 35)
             { big=false; }
         }
     }
