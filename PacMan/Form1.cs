@@ -79,7 +79,6 @@ namespace PacMan
             Clyde.Location = new Point(402, 302);
             Inky.Location = new Point(402, 302);
             Slimy.Location = new Point(402, 302);
-
         }
         private void LoadPellets()
         {
@@ -393,7 +392,6 @@ namespace PacMan
                             big = false;
                         }
                         #endregion
-
                     }
                 }
                 #endregion
@@ -557,7 +555,6 @@ namespace PacMan
                 System.Diagnostics.Process.Start(Application.ExecutablePath); 
                 Application.Exit();
             }
-
         }
         #region Ghost Movement
         private void PinkGhost()
@@ -761,14 +758,12 @@ namespace PacMan
             Lives();
             Reset();
         }
-
         private void pictureBox132_Click(object sender, EventArgs e)
         {
             f2.ShowDialog();
             tmrUpdate.Stop();
             MoveAndAnimate.Stop();
         }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.SScore = score;
@@ -779,7 +774,6 @@ namespace PacMan
             }
             Properties.Settings.Default.Save();
         }
-
         private void pictureBox48_Click(object sender, EventArgs e)
         {
             f3.ShowDialog();
