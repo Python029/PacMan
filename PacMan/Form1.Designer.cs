@@ -1703,7 +1703,6 @@ namespace PacMan
             // 
             // Big_Pellet
             // 
-            this.Big_Pellet.Enabled = true;
             this.Big_Pellet.Interval = 500;
             this.Big_Pellet.Tick += new System.EventHandler(this.Big_Pellet_Tick);
             // 

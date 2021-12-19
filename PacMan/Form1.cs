@@ -115,6 +115,8 @@ namespace PacMan
                 {
                     score += 50;
                     gScore = 0;
+                    x = 0;
+                    Big_Pellet.Enabled = true;
                     Bpellets[i].Dispose();
                     Bpellets.RemoveAt(i);
                     big = true;
@@ -788,8 +790,10 @@ namespace PacMan
         private void Big_Pellet_Tick(object sender, EventArgs e)
         {
             x++;
-            if(x>= 35)
-            { big=false; x = 0; }
+            if(x >= 22)
+            { big=false;
+                Big_Pellet.Enabled = false;
+            }
         }
     }
 }
