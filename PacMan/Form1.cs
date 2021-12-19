@@ -114,6 +114,7 @@ namespace PacMan
                 if (Player.Bounds.IntersectsWith(Bpellets[i].Bounds))
                 {
                     score += 50;
+                    gScore = 0;
                     Bpellets[i].Dispose();
                     Bpellets.RemoveAt(i);
                     big = true;
@@ -788,7 +789,7 @@ namespace PacMan
         {
             x++;
             if(x>= 35)
-            { big=false; }
+            { big=false; x = 0; }
         }
     }
 }
