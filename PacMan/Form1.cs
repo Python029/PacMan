@@ -732,11 +732,14 @@ namespace PacMan
             if(life==0)
             {
                 Lives1.Image = null;
+                Lives2.Image = null;
+                Lives3.Image = null;
             }
             else if (life == 1)
             {
                 Lives1.Image = Properties.Resources.PacManL1;
                 Lives2.Image = null;
+                Lives3.Image = null;
             }
             else if (life == 2)
             {
