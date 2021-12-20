@@ -29,6 +29,7 @@ namespace PacMan
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.SuspendLayout();
             // 
             // Form3
@@ -38,9 +39,10 @@ namespace PacMan
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::PacMan.Properties.Resources.CatDerik;
             this.ClientSize = new System.Drawing.Size(800, 708);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Cat Derik";
             this.ResumeLayout(false);
 
         }

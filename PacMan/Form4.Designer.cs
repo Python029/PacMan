@@ -29,6 +29,7 @@ namespace PacMan
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.SuspendLayout();
             // 
             // Form4
@@ -40,8 +41,10 @@ namespace PacMan
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(695, 751);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Bananos";
             this.ResumeLayout(false);
 
         }
