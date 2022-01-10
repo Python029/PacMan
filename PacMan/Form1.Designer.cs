@@ -383,7 +383,7 @@ namespace PacMan
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Location = new System.Drawing.Point(545, 324);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(94, 72);
+            this.pictureBox6.Size = new System.Drawing.Size(111, 72);
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
             // 
@@ -392,25 +392,25 @@ namespace PacMan
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Location = new System.Drawing.Point(545, 224);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(94, 72);
+            this.pictureBox4.Size = new System.Drawing.Size(111, 72);
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Location = new System.Drawing.Point(184, 224);
+            this.pictureBox3.Location = new System.Drawing.Point(167, 224);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(94, 72);
+            this.pictureBox3.Size = new System.Drawing.Size(111, 72);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Location = new System.Drawing.Point(184, 324);
+            this.pictureBox7.Location = new System.Drawing.Point(167, 324);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(94, 72);
+            this.pictureBox7.Size = new System.Drawing.Size(111, 72);
             this.pictureBox7.TabIndex = 9;
             this.pictureBox7.TabStop = false;
             // 
